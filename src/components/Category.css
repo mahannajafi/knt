@@ -1,0 +1,32 @@
+.category__container {
+  margin: 0 200px;
+  margin-top: 50px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 160px 0;
+  border-top: 1px solid #8f8f8f;
+  position: relative;
+}
+.category__pic img {
+  height: 200px;
+  width: 200px;
+}
+.category__pic-main img {
+  width: 300px;
+}
+.category__button {
+  position: absolute;
+  top: 0;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: var(--main-color);
+  color: var(--second-color);
+  padding: 7px 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}

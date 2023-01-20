@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "vazir";
+  src: url("./assets/fonts/woff/IRANSansX-Bold.woff"), 
+  url("./assets/fonts/woff/IRANSansX-Regular.woff"),
+}
+:root {
+  --main-color: #234e70;
+  --second-color: #fbf8be;
+}
+body {
+  margin: 0;
+  font-family:"vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
+}
+button{
+  font-family:"vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu' !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

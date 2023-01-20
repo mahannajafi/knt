@@ -1,0 +1,64 @@
+@import url('../index.css');
+
+.mainBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 200px;
+  /* box-shadow: 0px 0px 19px -2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 19px -2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 19px -2px rgba(0, 0, 0, 0.15); */
+  /* border-radius: 30px; */
+  background-image: url('../assets/imgs/main-pic.png') ;
+  background-size: cover;
+  padding: 0 80px;
+  padding-right: 150px;
+  height: 60vh;
+}
+.mainBanner__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start ;
+  justify-content: center;
+}
+.mainBanner__title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+.mainBanner__dec {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+}
+.mainBanner__buttons{
+  display: flex;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+.mainBanner__design,.mainBanner__learn  {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-family: "vazir";
+  font-weight: bold;
+  border: 3px solid var(--main-color);
+  padding: 3px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.mainBanner__design{
+color: var(--second-color);
+background-color: var(--main-color);
+}
+.mainBanner__learn{
+color: var(--main-color);
+}
+
+.mainBanner__img {
+  height: 350px;
+  width: 450px;
+  border-radius: 30px;
+}
+
