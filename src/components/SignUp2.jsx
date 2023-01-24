@@ -17,7 +17,7 @@ function SignUp2() {
                         <p>ثبت نام</p>
                         <input placeholder="کد تایید را وارد کنید"/>
                         <span>کد را دریافت نکرده اید؟ <Link to="/" className='link'>ارسال مجدد کد</Link></span>
-                        <section><button>تایید</button></section>
+                        <section><Link to="/SignUp3"><button>تایید</button></Link></section>
                     </div>
                 </div>
             </div>

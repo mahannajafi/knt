@@ -4,28 +4,27 @@
     box-sizing: border-box;
 }
 
-.signUp2Container {
+.signUp3Container {
     width: 100%;
     height: 100vh;
     display: flex;
-    gap: 1rem;
 }
 
-.signUp2Form , .signUp2Text {
+.signUp3Form , .signUp3Text {
     width: 50%;
     height: 100vh;
     position: relative;
 }
 
-.signUp2Form {
+.signUp3Form {
     background-color: #FFF;
 }
 
-.signUp2Text {
+.signUp3Text {
     background-color: var(--main-color);
 }
 
-.signUp2Form div , .signUp2Text div {
+.signUp3Form div , .signUp3Text div {
     width: 70%;
     height: 70%;
     position: absolute;
@@ -38,35 +37,35 @@
     box-shadow: 0 0 20px #333333;
 }
 
-.signUp2Form div {
+.signUp3Form div {
     right: 0;
     flex-direction: column;
     justify-content: start;
     border-radius: 6px 0 0 6px;
 }
 
-.signUp2Text div {
+.signUp3Text div {
     color: var(--second-color);
     left: 0;
     justify-content: center;
     border-radius: 0 6px 6px 0;
 }
 
-.signUp2Form div p , .signUp2Text div p {
+.signUp3Form div p , .signUp3Text div p {
     text-align: center;
     font-weight: bold;
 }
 
-.signUp2Form div p {
+.signUp3Form div p {
     padding: 80px 0;
     color: var(--main-color);
 }
 
-.signUp2Text div p {
+.signUp3Text div p {
     width: 100%;
 }
 
-.signUp2Form div input {
+.signUp3Form div input {
     width: 300px;
     height: 50px;
     border-radius: 60px;
@@ -75,23 +74,17 @@
     padding: 0 20px;
 }
 
-.signUp2Form div input::placeholder {
+.signUp3Form div input::placeholder {
     text-align: center;
 }
 
-.signUp2Form div section {
+.signUp3Form div section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.signUp2Form div span {
-    font-size: 0.6rem;
-    text-align: center;
-}
-
-
-.signUp2Form div section button {
+.signUp3Form div section button {
     border-radius: 40px;
     border: none;
     background-color: var(--main-color);
@@ -101,7 +94,7 @@
     cursor: pointer;
 }
 
-.signUp2Text div button {
+.signUp3Text div button {
     padding: 4px 40px 10px 40px;
     border-radius: 20px;
     border: 1px solid var(--second-color);
@@ -112,11 +105,4 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.link {
-    /*color: #0075bd;*/
-    color: deepskyblue;
-    text-decoration: none;
-    font-weight: bold;
 }
