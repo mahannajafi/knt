@@ -1,6 +1,5 @@
 import React from "react";
 import "./SignUp1.css"
-import SignUp2 from "./SignUp2";
 import {Link} from "react-router-dom";
 
 function SignUp1() {
