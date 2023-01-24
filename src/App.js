@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import MiniNavbar from './components/MiniNavbar';
 import Footer from './components/Footer';
 import SignUp1 from "./components/SignUp1";
+import SignUp2 from "./components/SignUp2";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         </Route>
 
         <Route path="/SignUp1" element={<SignUp1/>}></Route>
+        <Route path="/SignUp2" element={<SignUp2/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

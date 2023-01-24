@@ -1,5 +1,7 @@
 import React from "react";
 import "./SignUp1.css"
+import SignUp2 from "./SignUp2";
+import {Link} from "react-router-dom";
 
 function SignUp1() {
     return (
@@ -15,7 +17,7 @@ function SignUp1() {
                     <div>
                         <p>ثبت نام</p>
                         <input placeholder="شماره همراه خود را وارد کنید"/>
-                        <section><button>ارسال کد</button></section>
+                        <section><Link to='/SignUp2'><button>ارسال کد</button></Link></section>
                     </div>
                 </div>
             </div>
