@@ -10,7 +10,7 @@ function ForgetPassword2() {
                     <div>
                         <p>بازیابی کلمه ی عبور</p>
                         <input placeholder="کد ارسال شده را وارد کنید"/>
-                        <section><Link to='/'><button>تایید کد</button></Link></section>
+                        <section><Link to='/ForgetPassword3'><button>تایید کد</button></Link></section>
                     </div>
                 </div>
                 <div className='Forget2Text'>
