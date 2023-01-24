@@ -3,6 +3,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MiniNavbar from './components/MiniNavbar';
 import Footer from './components/Footer';
+import SignUp1 from "./components/SignUp1";
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route path='products' element={<></>}/>
 
         </Route>
+
+        <Route path="/SignUp1" element={<SignUp1/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

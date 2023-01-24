@@ -8,6 +8,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import SignUp1 from "./SignUp1";
 
 function Navbar() {
   return (
@@ -30,7 +31,7 @@ function Navbar() {
           </div>
           <div className="headerUp__design headerUp__design-primary">
             <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-            <Link to="/login">
+            <Link to="/SignUp1">
               <button className="headerUp__designBtn headerUp__designBtn-primary">
                 ورود | ثبت نام
               </button>
