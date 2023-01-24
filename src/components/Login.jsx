@@ -11,7 +11,7 @@ function Login() {
                         <p>ورود</p>
                         <input placeholder="شماره همراه خود را وارد کنید"/>
                         <input placeholder="رمز عبور خود را وارد کنید"/>
-                        <span>رمز عبور خود را فراموش کرده اید؟<Link to="/" className='link'>بازیابی رمز عبور</Link></span>
+                        <span>رمز عبور خود را فراموش کرده اید؟<Link to="/ForgetPassword1" className='link'>بازیابی رمز عبور</Link></span>
                         <section><Link to='/Home'><button>ورود</button></Link></section>
                     </div>
                 </div>

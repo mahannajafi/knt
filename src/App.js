@@ -7,6 +7,7 @@ import SignUp1 from "./components/SignUp1";
 import SignUp2 from "./components/SignUp2";
 import SignUp3 from "./components/SignUp3";
 import Login from "./components/Login";
+import ForgetPassword1 from "./components/ForgetPassword1";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/SignUp2" element={<SignUp2/>}></Route>
         <Route path="/SignUp3" element={<SignUp3/>}></Route>
         <Route path="/Login" element={<Login/>}></Route>
+        <Route path="/ForgetPassword1" element={<ForgetPassword1/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>
