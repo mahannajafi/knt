@@ -8,6 +8,7 @@ import SignUp2 from "./components/SignUp2";
 import SignUp3 from "./components/SignUp3";
 import Login from "./components/Login";
 import ForgetPassword1 from "./components/ForgetPassword1";
+import ForgetPassword2 from "./components/ForgetPassword2";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/SignUp3" element={<SignUp3/>}></Route>
         <Route path="/Login" element={<Login/>}></Route>
         <Route path="/ForgetPassword1" element={<ForgetPassword1/>}></Route>
+        <Route path="/ForgetPassword2" element={<ForgetPassword2/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

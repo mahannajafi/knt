@@ -1,19 +1,19 @@
 import React from "react";
-import "./ForgetPassword1.css"
+import "./ForgetPassword2.css"
 import {Link} from "react-router-dom";
 
-function ForgetPassword1() {
+function ForgetPassword2() {
     return (
         <>
-            <div className='Forget1Container'>
-                <div className='Forget1Form'>
+            <div className='Forget2Container'>
+                <div className='Forget2Form'>
                     <div>
                         <p>بازیابی کلمه ی عبور</p>
-                        <input placeholder="شماره همراه خود را وارد کنید"/>
-                        <section><Link to='/ForgetPassword2'><button>ارسال کد</button></Link></section>
+                        <input placeholder="کد ارسال شده را وارد کنید"/>
+                        <section><Link to='/'><button>تایید کد</button></Link></section>
                     </div>
                 </div>
-                <div className='Forget1Text'>
+                <div className='Forget2Text'>
                     <div>
                         <p>حساب کاربری ندارید؟</p>
                         <button>ثبت نام</button>
@@ -24,4 +24,4 @@ function ForgetPassword1() {
     )
 }
 
-export default ForgetPassword1;
+export default ForgetPassword2;
