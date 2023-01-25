@@ -4,27 +4,27 @@
     box-sizing: border-box;
 }
 
-.signUp3Container {
+.registerContainer {
     width: 100%;
     height: 100vh;
     display: flex;
 }
 
-.signUp3Form , .signUp3Text {
+.registerForm , .registerText {
     width: 50%;
     height: 100vh;
     position: relative;
 }
 
-.signUp3Form {
+.registerForm {
     background-color: #FFF;
 }
 
-.signUp3Text {
+.registerText {
     background-color: var(--main-color);
 }
 
-.signUp3Form div , .signUp3Text div {
+.registerForm div , .registerText div {
     width: 70%;
     height: 70%;
     position: absolute;
@@ -37,35 +37,35 @@
     box-shadow: 0 0 20px #333333;
 }
 
-.signUp3Form div {
+.registerForm div {
     right: 0;
     flex-direction: column;
     justify-content: start;
     border-radius: 6px 0 0 6px;
 }
 
-.signUp3Text div {
+.registerText div {
     color: var(--second-color);
     left: 0;
     justify-content: center;
     border-radius: 0 6px 6px 0;
 }
 
-.signUp3Form div p , .signUp3Text div p {
+.registerForm div p , .registerText div p {
     text-align: center;
     font-weight: bold;
 }
 
-.signUp3Form div p {
+.registerForm div p {
     padding: 80px 0;
     color: var(--main-color);
 }
 
-.signUp3Text div p {
+.registerText div p {
     width: 100%;
 }
 
-.signUp3Form div input {
+.registerForm div input {
     width: 300px;
     height: 50px;
     border-radius: 60px;
@@ -74,17 +74,19 @@
     padding: 0 20px;
 }
 
-.signUp3Form div input::placeholder {
+.registerForm div input::placeholder {
     text-align: center;
+    font-weight: 700;
+    font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
 }
 
-.signUp3Form div section {
+.registerForm div section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.signUp3Form div section button {
+.registerForm div section button {
     border-radius: 40px;
     border: none;
     background-color: var(--main-color);
@@ -92,9 +94,10 @@
     text-align: center;
     padding: 10px 30px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-.signUp3Text div button {
+.registerText div button {
     padding: 4px 40px 10px 40px;
     border-radius: 20px;
     border: 1px solid var(--second-color);
@@ -105,4 +108,20 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.registerForm span {
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.registerForm span .link {
+    color: deepskyblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.log {
+    text-decoration: none;
 }
