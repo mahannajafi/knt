@@ -32,7 +32,7 @@ function Navbar() {
             <FontAwesomeIcon icon={faArrowAltCircleLeft} />
 
               <button className="headerUp__designBtn headerUp__designBtn-primary">
-                <Link to="/Login">ورود</Link>&nbsp;|&nbsp;<Link to="/SignUp">ثبت نام</Link>
+                <Link className="headerUp__designBtnLink" to="/Login">ورود</Link>&nbsp;|&nbsp;<Link className="headerUp__designBtnLink" to="/SignUp">ثبت نام</Link>
               </button>
 
           </div>

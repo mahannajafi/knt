@@ -69,6 +69,11 @@
   font-family: "vazir";
   cursor: pointer;
 }
+.headerUp__designBtnLink{
+  color: var(--second-color);
+  text-decoration: none;
+
+}
 .headerUp__design-primary {
   color: var(--second-color);
   background-color: var(--main-color);
