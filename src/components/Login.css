@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loginContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.loginForm , .loginText {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+
+.loginForm {
+    background-color: #FFF;
+}
+
+.loginText {
+    background-color: var(--main-color);
+}
+
+.loginForm div , .loginText div {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 2rem;
+    box-shadow: 0 0 20px #333333;
+}
+
+.loginForm div {
+    left: 0;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 0 6px 6px 0;
+}
+
+.loginText div {
+    color: var(--second-color);
+    right: 0;
+    justify-content: center;
+    border-radius: 6px 0 0 6px;
+}
+
+.loginForm div p , .loginText div p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.loginForm div p {
+    padding: 80px 0;
+    color: var(--main-color);
+}
+
+.loginText div p {
+    width: 100%;
+}
+
+.loginForm div input {
+    width: 300px;
+    height: 50px;
+    border-radius: 60px;
+    border: none;
+    box-shadow: 0 0 10px #949494 inset;
+    padding: 0 20px;
+}
+
+.loginForm div input::placeholder {
+    text-align: center;
+    font-weight: 700;
+    font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
+}
+
+.loginForm div section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm div section button {
+    border-radius: 40px;
+    border: none;
+    background-color: var(--main-color);
+    color: #FFF;
+    text-align: center;
+    padding: 6px 30px 10px 30px;
+    cursor: pointer;
+}
+
+.loginText div button {
+    padding: 4px 40px 10px 40px;
+    border-radius: 20px;
+    border: 1px solid var(--second-color);
+    background-color: var(--main-color);
+    font-size: 1.1rem;
+    color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.loginForm span {
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.loginForm span .link {
+    color: deepskyblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.reg {
+    text-decoration: none;
+}

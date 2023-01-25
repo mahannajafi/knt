@@ -30,11 +30,11 @@ function Navbar() {
           </div>
           <div className="headerUp__design headerUp__design-primary">
             <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-            <Link to="/login">
+
               <button className="headerUp__designBtn headerUp__designBtn-primary">
-                ورود | ثبت نام
+                <Link to="/Login">ورود</Link>&nbsp;|&nbsp;<Link to="/SignUp">ثبت نام</Link>
               </button>
-            </Link>
+
           </div>
           <div className="headerUp__shop_icon">
             <FontAwesomeIcon icon={faCartShopping} />
