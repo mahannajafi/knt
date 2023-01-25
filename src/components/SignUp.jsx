@@ -1,22 +1,22 @@
 import React from "react";
-import "./SignUp1.css"
+import "./Register.css"
 import {Link} from "react-router-dom";
 
-function SignUp1() {
+function SignUp() {
     return (
         <>
-            <div className='signUp1Container'>
-                <div className='signUp1Text'>
+            <div className='registerContainer'>
+                <div className='registerText'>
                     <div>
                         <p>ثبت نام کرده اید؟</p>
-                        <button>ورود</button>
+                        <Link to="/Login" className="log"><button>ورود</button></Link>
                     </div>
                 </div>
-                <div className='signUp1Form'>
+                <div className='registerForm'>
                     <div>
                         <p>ثبت نام</p>
                         <input placeholder="شماره همراه خود را وارد کنید"/>
-                        <section><Link to='/SignUp2'><button>ارسال کد</button></Link></section>
+                        <section><Link to='/sendCode'><button>ارسال کد</button></Link></section>
                     </div>
                 </div>
             </div>
@@ -24,4 +24,4 @@ function SignUp1() {
     )
 }
 
-export default SignUp1;
+export default SignUp;

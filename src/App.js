@@ -3,13 +3,13 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MiniNavbar from './components/MiniNavbar';
 import Footer from './components/Footer';
-import SignUp1 from "./components/SignUp1";
-import SignUp2 from "./components/SignUp2";
-import SignUp3 from "./components/SignUp3";
+import SignUp from "./components/SignUp";
+import SendCode from "./components/SendCode";
+import ChoosePass from "./components/ChoosePass";
 import Login from "./components/Login";
-import ForgetPassword1 from "./components/ForgetPassword1";
-import ForgetPassword2 from "./components/ForgetPassword2";
-import ForgetPassword3 from "./components/ForgetPassword3";
+import ForgetPass from "./components/ForgetPass";
+import ResetPassCode from "./components/ResetPassCode";
+import ResetPass from "./components/ResetPass";
 
 function App() {
   return (
@@ -24,13 +24,13 @@ function App() {
 
         </Route>
 
-        <Route path="/SignUp1" element={<SignUp1/>}></Route>
-        <Route path="/SignUp2" element={<SignUp2/>}></Route>
-        <Route path="/SignUp3" element={<SignUp3/>}></Route>
+        <Route path="/SignUp" element={<SignUp/>}></Route>
+        <Route path="/SendCode" element={<SendCode/>}></Route>
+        <Route path="/ChoosePass" element={<ChoosePass/>}></Route>
         <Route path="/Login" element={<Login/>}></Route>
-        <Route path="/ForgetPassword1" element={<ForgetPassword1/>}></Route>
-        <Route path="/ForgetPassword2" element={<ForgetPassword2/>}></Route>
-        <Route path="/ForgetPassword3" element={<ForgetPassword3/>}></Route>
+        <Route path="/ForgetPass" element={<ForgetPass/>}></Route>
+        <Route path="/ResetPassCode" element={<ResetPassCode/>}></Route>
+        <Route path="/ResetPass" element={<ResetPass/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

@@ -1,12 +1,12 @@
 import React from "react";
-import "./ForgetPassword3.css"
+import "./Login.css"
 import {Link} from "react-router-dom";
 
-function ForgetPassword3() {
+function ResetPass() {
     return (
         <>
-            <div className='Forget3Container'>
-                <div className='Forget3Form'>
+            <div className='loginContainer'>
+                <div className='loginForm'>
                     <div>
                         <p>بازیابی کلمه ی عبور</p>
                         <input placeholder="رمز عبور جدید را وارد کنید"/>
@@ -14,10 +14,10 @@ function ForgetPassword3() {
                         <section><Link to='/'><button>تغییر رمز عبور</button></Link></section>
                     </div>
                 </div>
-                <div className='Forget3Text'>
+                <div className='loginText'>
                     <div>
                         <p>حساب کاربری ندارید؟</p>
-                        <button>ثبت نام</button>
+                        <Link to="/SignUp" className="reg"><button>ثبت نام</button></Link>
                     </div>
                 </div>
             </div>
@@ -25,4 +25,4 @@ function ForgetPassword3() {
     )
 }
 
-export default ForgetPassword3;
+export default ResetPass;

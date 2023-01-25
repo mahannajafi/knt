@@ -76,6 +76,8 @@
 
 .loginForm div input::placeholder {
     text-align: center;
+    font-weight: 700;
+    font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
 }
 
 .loginForm div section {
@@ -90,7 +92,7 @@
     background-color: var(--main-color);
     color: #FFF;
     text-align: center;
-    padding: 10px 30px;
+    padding: 6px 30px 10px 30px;
     cursor: pointer;
 }
 
@@ -105,6 +107,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .loginForm span {
@@ -116,4 +119,8 @@
     color: deepskyblue;
     text-decoration: none;
     font-weight: bold;
+}
+
+.reg {
+    text-decoration: none;
 }

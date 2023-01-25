@@ -11,14 +11,14 @@ function Login() {
                         <p>ورود</p>
                         <input placeholder="شماره همراه خود را وارد کنید"/>
                         <input placeholder="رمز عبور خود را وارد کنید"/>
-                        <span>رمز عبور خود را فراموش کرده اید؟<Link to="/ForgetPassword1" className='link'>بازیابی رمز عبور</Link></span>
-                        <section><Link to='/Home'><button>ورود</button></Link></section>
+                        <span>رمز عبور خود را فراموش کرده اید؟<Link to="/ForgetPass" className='link'>بازیابی رمز عبور</Link></span>
+                        <section><Link to='/'><button>ورود</button></Link></section>
                     </div>
                 </div>
                 <div className='loginText'>
                     <div>
                         <p>حساب کاربری ندارید؟</p>
-                        <button>ثبت نام</button>
+                        <Link to="/SignUp" className="reg"><button>ثبت نام</button></Link>
                     </div>
                 </div>
             </div>

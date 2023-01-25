@@ -1,19 +1,18 @@
 import React from "react";
-import "./SignUp3.css"
-import SignUp2 from "./SignUp2";
+import "./Register.css"
 import {Link} from "react-router-dom";
 
-function SignUp1() {
+function ChoosePass() {
     return (
         <>
-            <div className='signUp3Container'>
-                <div className='signUp3Text'>
+            <div className='registerContainer'>
+                <div className='registerText'>
                     <div>
                         <p>ثبت نام کرده اید؟</p>
-                        <button>ورود</button>
+                        <Link to="/Login" className="log"><button>ورود</button></Link>
                     </div>
                 </div>
-                <div className='signUp3Form'>
+                <div className='registerForm'>
                     <div>
                         <p>ثبت نام</p>
                         <input placeholder="رمز خود را وارد کنید"/>
@@ -26,4 +25,4 @@ function SignUp1() {
     )
 }
 
-export default SignUp1;
+export default ChoosePass;

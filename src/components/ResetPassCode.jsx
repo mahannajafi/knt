@@ -1,22 +1,22 @@
 import React from "react";
-import "./ForgetPassword2.css"
+import "./Login.css"
 import {Link} from "react-router-dom";
 
 function ForgetPassword2() {
     return (
         <>
-            <div className='Forget2Container'>
-                <div className='Forget2Form'>
+            <div className='loginContainer'>
+                <div className='loginForm'>
                     <div>
                         <p>بازیابی کلمه ی عبور</p>
                         <input placeholder="کد ارسال شده را وارد کنید"/>
-                        <section><Link to='/ForgetPassword3'><button>تایید کد</button></Link></section>
+                        <section><Link to='/ResetPass'><button>تایید کد</button></Link></section>
                     </div>
                 </div>
-                <div className='Forget2Text'>
+                <div className='loginText'>
                     <div>
                         <p>حساب کاربری ندارید؟</p>
-                        <button>ثبت نام</button>
+                        <Link to="/SignUp" className="reg"><button>ثبت نام</button></Link>
                     </div>
                 </div>
             </div>
