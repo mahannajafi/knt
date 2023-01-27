@@ -10,6 +10,8 @@ import Login from "./components/Login";
 import ForgetPass from "./components/ForgetPass";
 import ResetPassCode from "./components/ResetPassCode";
 import ResetPass from "./components/ResetPass";
+import DesignerDashboard from "./components/DesignerDashboard";
+import MyMessages from "./components/MyMessages";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/ForgetPass" element={<ForgetPass/>}></Route>
         <Route path="/ResetPassCode" element={<ResetPassCode/>}></Route>
         <Route path="/ResetPass" element={<ResetPass/>}></Route>
+        <Route path="/DesignerDashboard" element={<DesignerDashboard/>}></Route>
+        <Route path="/MyMessages" element={<MyMessages/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

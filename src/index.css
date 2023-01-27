@@ -5,8 +5,8 @@
 }
 @font-face {
   font-family: "vazir";
-  src: url("./assets/fonts/woff/IRANSansX-Bold.woff"), 
-  url("./assets/fonts/woff/IRANSansX-Regular.woff"),
+  src: url("./assets/fonts/woff/IRANSansX-Bold.woff"),
+  url("./assets/fonts/woff/IRANSansX-Regular.woff")
 }
 :root {
   --main-color: #234e70;
