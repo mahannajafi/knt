@@ -12,6 +12,7 @@ import ResetPassCode from "./components/ResetPassCode";
 import ResetPass from "./components/ResetPass";
 import DesignerDashboard from "./components/DesignerDashboard";
 import MyMessages from "./components/MyMessages";
+import MyDesigns from "./components/MyDesigns";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/ResetPass" element={<ResetPass/>}></Route>
         <Route path="/DesignerDashboard" element={<DesignerDashboard/>}></Route>
         <Route path="/MyMessages" element={<MyMessages/>}></Route>
+        <Route path="/MyDesigns" element={<MyDesigns/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>
