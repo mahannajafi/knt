@@ -1,4 +1,6 @@
 import Home from './Pages/Home';
+import Design from "./Pages/Design"
+import SingleProduct from "./Pages/SingleProduct"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MiniNavbar from './components/MiniNavbar';
@@ -18,7 +20,8 @@ function App() {
         <Route path='/'>
           <Route path='' element={<Home />} />
           <Route path='*' element={<Home />} />
-          <Route path='products' element={<></>} />
+          <Route path='SingleProduct' element={<SingleProduct />} />
+          <Route path='Design' element={<Design />} />
           <Route path="SignUp" element={<SignUp />}></Route>
           <Route path="SendCode" element={<SendCode />}></Route>
           <Route path="ChoosePass" element={<ChoosePass />}></Route>
