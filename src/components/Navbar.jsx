@@ -26,13 +26,17 @@ function Navbar() {
           <div className="headerUp__design">
             <FontAwesomeIcon icon={faPenRuler} />
 
-            <button className="headerUp__designBtn">طراحی کنید</button>
+            <button className="headerUp__designBtn">
+              <Link className="headerUp__designBtnLink--primary" to="/Design">
+                طراحی کنید
+              </Link>
+            </button>
           </div>
           <div className="headerUp__design headerUp__design-primary">
             <FontAwesomeIcon icon={faArrowAltCircleLeft} />
 
               <button className="headerUp__designBtn headerUp__designBtn-primary">
-                <Link to="/Login">ورود</Link>&nbsp;|&nbsp;<Link to="/SignUp">ثبت نام</Link>
+                <Link className="headerUp__designBtnLink" to="/Login">ورود</Link>&nbsp;|&nbsp;<Link className="headerUp__designBtnLink" to="/SignUp">ثبت نام</Link>
               </button>
 
           </div>
