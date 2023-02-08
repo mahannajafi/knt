@@ -74,6 +74,10 @@
   text-decoration: none;
 
 }
+.headerUp__designBtnLink--primary {
+  color: var(--main-color);
+  text-decoration: none;
+}
 .headerUp__design-primary {
   color: var(--second-color);
   background-color: var(--main-color);
