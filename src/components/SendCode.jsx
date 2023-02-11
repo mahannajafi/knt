@@ -1,8 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Register.css"
 import {Link} from "react-router-dom";
+import {useForm} from "react-hook-form";
 
-function sendCode() {
+function SendCode() {
+    const [verificationCode, setVerificationCode] = useState('');
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const handleChange = (event) => {
+        setVerificationCode(event.target.value);
+        if (event.target.value.length !== 5) {
+            document.getElementsByClassName('btn')[0].style.background = 'grey'
+            document.getElementsByClassName('btn')[0].style.cursor = 'auto'
+            document.getElementsByClassName('goAhead')[0].style.pointerEvents = "none"
+            document.getElementsByClassName('disableLink')[0].style.display = 'inline'
+            document.getElementsByClassName('goAhead')[0].style.display = 'none'
+            document.getElementsByClassName('goAhead')[0].style.disabled = true
+        }
+        else {
+            document.getElementsByClassName('btn')[0].style.background = '#234E70FF'
+            document.getElementsByClassName('btn')[0].style.cursor = 'pointer'
+            document.getElementsByClassName('goAhead')[0].style.pointerEvents = ""
+            document.getElementsByClassName('disableLink')[0].style.display = 'none'
+            document.getElementsByClassName('goAhead')[0].style.display = 'inline'
+            document.getElementsByClassName('goAhead')[0].style.disabled = false
+        }
+    };
+
     return (
         <>
             <div className='registerContainer'>
@@ -15,9 +39,14 @@ function sendCode() {
                 <div className='registerForm'>
                     <div>
                         <p>ثبت نام</p>
-                        <input placeholder="کد تایید را وارد کنید"/>
-                        <span>کد را دریافت نکرده اید؟ <Link to="/" className='link'>ارسال مجدد کد</Link></span>
-                        <section><Link to="/ChoosePass" className="link"><button>تایید</button></Link></section>
+                        <form>
+                            <input placeholder='کد تایید را وارد کنید' type="text" value={verificationCode} onChange={handleChange}/>
+                            <p className="error">&nbsp;</p>
+                            <span>کد را دریافت نکرده اید؟ <Link to="/SendCode" className='link'>ارسال مجدد کد</Link></span>
+                            <button disabled={true} type='submit' className='btn'>
+                                <span className='disableLink'>تایید</span>
+                                <Link to='/ChoosePass' className="goAhead">تایید</Link></button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -25,4 +54,4 @@ function sendCode() {
     )
 }
 
-export default sendCode;
+export default SendCode;
