@@ -5,14 +5,17 @@ import MainCards from "../components/MainCards";
 import Upgrade from "../components/Upgrade.jsx"
 import Popular from "../components/Popular";
 import Vlog from "../components/Vlog";
-import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import MiniNavbar from "../components/MiniNavbar";
+import Footer from "../components/Footer";
 
 
 
 const Home = () => {
   return (
     <>
-
+      <Navbar/>
+      <MiniNavbar/>
       <MainBanner />
       <Category />
       <MainCards />
@@ -20,6 +23,7 @@ const Home = () => {
       <Upgrade/>
       <Popular/> 
       <Vlog/>   
+      <Footer/>
     </>
   );
 };
