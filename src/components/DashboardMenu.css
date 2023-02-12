@@ -13,7 +13,7 @@
     color: #FFF;
 }
 
-.dashboardMenuContainer * {
+.dashboardMenuContainer strong , .dashboardMenuContainer small , .dashboardMenuContainer button {
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,7 +34,8 @@
 .dashboardMenuContainer ul{
     display: flex;
     flex-wrap: wrap;
-    /*gap: 1.2rem;*/
+    justify-content: start !important;
+    align-items: center;
     margin-bottom: 30px;
     width: calc(100% -  20px);
     margin-right: 20px;
@@ -42,11 +43,12 @@
 
 .dashboardMenuContainer ul li {
     width: 100%;
+    /*padding: 10px 60px 10px 0;*/
+    border-radius: 0 20px 20px 0;
     display: flex;
     justify-content: start !important;
-    padding: 10px 40px 10px 0;
-    cursor: pointer;
-    border-radius: 0 20px 20px 0;
+    align-items: center;
+    position: relative;
 }
 
 .dashboard {
@@ -54,17 +56,19 @@
     color: #FFF;
     /*background-color: yellow;*/
     border-radius: 0 20px 20px 0;
+    padding: 10px 60px 10px 0;
+    width: 100%;
+    height: 100%;
 }
 
-/*.dashboardMenuContainer ul .dashboard {*/
-/*    width: 100%;*/
-/*    display: flex;*/
-/*    justify-content: start !important;*/
-/*    padding: 10px 50px 10px 0;*/
-/*    cursor: pointer;*/
-/*    background-color: yellow;*/
-/*    border-radius: 0 20px 20px 0;*/
-/*}*/
+.menuIcons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 36px;
+}
 
 .dashboardMenuContainer button:nth-of-type(2) {
     width: 90%;
@@ -80,4 +84,11 @@
 .accountIcon {
     color: white;
     background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/*.dashboard:visited {*/
+/*    color: red;*/
+/*}*/
