@@ -6,6 +6,7 @@ import DesignerExplanation from "../components/SingleProduct/DesignerExplanation
 import ProductFeatures from "../components/SingleProduct/ProductFeatures";
 import Popular from "../components/Popular";
 import UserComments from "../components/SingleProduct/UserComments";
+
 import Footer from "../components/Footer";
 
 const SingleProduct = () => {
@@ -19,6 +20,7 @@ const SingleProduct = () => {
       <ProductFeatures />
       <Popular />
       <UserComments />
+
       <Footer />
     </>
   );

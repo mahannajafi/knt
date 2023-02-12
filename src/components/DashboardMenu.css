@@ -1,0 +1,94 @@
+.dashboardMenuContainer {
+    width: 20%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1rem;
+    padding: 20px 0;
+    min-height: 800px;
+    border-radius: 40px;
+    color: #FFF;
+}
+
+.dashboardMenuContainer strong , .dashboardMenuContainer small , .dashboardMenuContainer button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboardMenuContainer button:nth-of-type(1) {
+    width: 90%;
+    border: 1px solid var(--second-color);
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border-radius: 12px;
+    padding: 6px 0;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.dashboardMenuContainer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start !important;
+    align-items: center;
+    margin-bottom: 30px;
+    width: calc(100% -  20px);
+    margin-right: 20px;
+}
+
+.dashboardMenuContainer ul li {
+    width: 100%;
+    /*padding: 10px 60px 10px 0;*/
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: start !important;
+    align-items: center;
+    position: relative;
+}
+
+.dashboard {
+    text-decoration: none;
+    color: #FFF;
+    /*background-color: yellow;*/
+    border-radius: 0 20px 20px 0;
+    padding: 10px 60px 10px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menuIcons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 36px;
+}
+
+.dashboardMenuContainer button:nth-of-type(2) {
+    width: 90%;
+    border: 1px solid var(--second-color);
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border-radius: 16px;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accountIcon {
+    color: white;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.dashboard:visited {*/
+/*    color: red;*/
+/*}*/
