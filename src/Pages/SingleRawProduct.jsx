@@ -4,10 +4,14 @@ import RawProductShowCase from "../components/SingleRawProduct/RawProductShowCas
 import ProductSellerBox from "../components/SingleRawProduct/ProductSellerBox";
 import Popular from "../components/Popular";
 import Footer from "../components/Footer";
+import { useLocation } from "react-router-dom";
 
 const SingleProduct = () => {
+  let { state } = useLocation();
+
   return (
     <>
+    {/* <div>{state.id}</div> */}
       <Navbar />
       <MiniNavbar />
       <RawProductShowCase />

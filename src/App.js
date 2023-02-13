@@ -17,6 +17,8 @@ import ResetPass from "./components/ResetPass";
 import DesignerDashboard from "./components/DesignerDashboard";
 import MyMessages from "./components/MyMessages";
 import MyDesigns from "./components/MyDesigns";
+import Learn from './components/Learn';
+import ChooseSingleProduct from './Pages/ChooseSingleProduct';
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
           <Route path="DesignerDashboard" element={<DesignerDashboard />}></Route>
           <Route path="MyMessages" element={<MyMessages />}></Route>
           <Route path="MyDesigns" element={<MyDesigns />}></Route>
+          <Route path='Learn' element ={<Learn/>}></Route>
+          <Route path='ChooseSingleProduct' element={<ChooseSingleProduct/>}></Route>
         </Route>
 
       </Routes >
