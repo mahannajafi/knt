@@ -4,9 +4,8 @@ import SingleProduct from "./Pages/SingleProduct"
 import SingleRawProduct from "./Pages/SingleRawProduct"
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import MiniNavbar from './components/MiniNavbar';
-import Footer from './components/Footer';
+import MiniNavbar from './components/MiniNavbar/MiniNavbar';
+import Footer from './components/Footer/Footer';
 import SignUp from "./components/SignUp";
 import SendCode from "./components/SendCode";
 import ChoosePass from "./components/ChoosePass";
@@ -17,7 +16,7 @@ import ResetPass from "./components/ResetPass";
 import DesignerDashboard from "./components/DesignerDashboard";
 import MyMessages from "./components/MyMessages";
 import MyDesigns from "./components/MyDesigns";
-import Learn from './components/Learn';
+import Learn from './components/Learn/Learn';
 import ChooseSingleProduct from './Pages/ChooseSingleProduct';
 
 function App() {
@@ -42,8 +41,8 @@ function App() {
           <Route path="DesignerDashboard" element={<DesignerDashboard />}></Route>
           <Route path="MyMessages" element={<MyMessages />}></Route>
           <Route path="MyDesigns" element={<MyDesigns />}></Route>
-          <Route path='Learn' element ={<Learn/>}></Route>
-          <Route path='ChooseSingleProduct' element={<ChooseSingleProduct/>}></Route>
+          <Route path='Learn' element={<Learn />}></Route>
+          <Route path='ChooseSingleProduct' element={<ChooseSingleProduct />}></Route>
         </Route>
 
       </Routes >

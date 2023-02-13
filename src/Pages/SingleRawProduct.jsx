@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar";
-import MiniNavbar from "../components/MiniNavbar";
+import Navbar from "../components/Navbar/Navbar";
+import MiniNavbar from "../components/MiniNavbar/MiniNavbar";
 import RawProductShowCase from "../components/SingleRawProduct/RawProductShowCase";
 import ProductSellerBox from "../components/SingleRawProduct/ProductSellerBox";
-import Popular from "../components/Popular";
-import Footer from "../components/Footer";
+import Popular from "../components/Popular/Popular";
+import Footer from "../components/Footer/Footer";
 import { useLocation } from "react-router-dom";
 
 const SingleProduct = () => {
@@ -11,7 +11,7 @@ const SingleProduct = () => {
 
   return (
     <>
-    {/* <div>{state.id}</div> */}
+      {/* <div>{state.id}</div> */}
       <Navbar />
       <MiniNavbar />
       <RawProductShowCase />

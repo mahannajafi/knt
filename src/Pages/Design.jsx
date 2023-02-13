@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar";
-import MiniNavbar from "../components/MiniNavbar";
+import Navbar from "../components/Navbar/Navbar";
+import MiniNavbar from "../components/MiniNavbar/MiniNavbar";
 import ShowCase from "../components/Design/ShowCase";
 import DesignInfo from "../components/Design/DesignInfo";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 
 const Design = () => {
   return (

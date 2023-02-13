@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Footer from "./Footer";
-import MiniNavbar from "./MiniNavbar";
-import Navbar from "./Navbar";
+import Footer from "../Footer/Footer";
+import MiniNavbar from "../MiniNavbar/MiniNavbar";
+import Navbar from "../Navbar/Navbar";
 import "./Learn.css";
 import { Link } from "react-router-dom";
-import Home from "../Pages/Home";
-import Design from "../Pages/Design";
+import Home from "../../Pages/Home";
+import Design from "../../Pages/Design";
 import axios from "axios";
 
 const Learn = () => {
@@ -47,7 +47,11 @@ const Learn = () => {
         <div className="Go__container">
           {data.map((data) => {
             return (
-              <Link className="Name" to='/ChooseSingleProduct' state={{ id: data.id }}>
+              <Link
+                className="Name"
+                to="/ChooseSingleProduct"
+                state={{ id: data.id }}
+              >
                 <div id={data.id} className="Go__item">
                   <img
                     src={data.image}

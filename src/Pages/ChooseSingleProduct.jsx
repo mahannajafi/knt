@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "../components/ChooseSingleProduct.css";
+import "../components/ChooseSingleProduct/ChooseSingleProduct.css";
 import axios from "axios";
-import Navbar from "../components/Navbar";
-import MiniNavbar from "../components/MiniNavbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import MiniNavbar from "../components/MiniNavbar/MiniNavbar";
+import Footer from "../components/Footer/Footer";
 
 const ChooseSingleProduct = () => {
   let { state } = useLocation();
@@ -36,7 +36,11 @@ const ChooseSingleProduct = () => {
           <div className="Choose__Boxes">
             {data.map((data) => {
               return (
-                <Link className="Link" to='/SingleRawProduct' state={{ id: data.id }}>
+                <Link
+                  className="Link"
+                  to="/SingleRawProduct"
+                  state={{ id: data.id }}
+                >
                   <div className="Choose__Box">
                     <img
                       src={data.blank_product_images[0].image}

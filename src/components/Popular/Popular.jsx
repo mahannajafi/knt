@@ -1,7 +1,7 @@
-import TitleCat from "../components/TitleCat";
-import pic from '../assets/imgs/titlepic.png'
-import Swiperer from "../components/Swiperer";
-import './Papular.css'
+import TitleCat from "../TitleCat/TitleCat";
+import pic from "../../assets/imgs/titlepic.png";
+import Swiperer from "../Swiperer/Swiperer";
+import "./Papular.css";
 
 const Popular = () => {
   return (

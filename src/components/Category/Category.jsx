@@ -1,7 +1,7 @@
 import "./Category.css";
-import mask1 from "../assets/imgs/Mask1.png";
-import mask2 from "../assets/imgs/Mask2.png";
-import mask3 from "../assets/imgs/Mask3.png";
+import mask1 from "../../assets/imgs/Mask1.png";
+import mask2 from "../../assets/imgs/Mask2.png";
+import mask3 from "../../assets/imgs/Mask3.png";
 
 function Category() {
   return (
