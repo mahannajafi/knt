@@ -23,8 +23,6 @@ const ChooseSingleProduct = () => {
     <>
       <Navbar />
       <MiniNavbar />
-      {/* <div>{state.id}</div>
-      <div>{data[0].title}</div> */}
       <div className="Choose__container">
         <div className="Choose__items">
           <div className="Choose__titles">
