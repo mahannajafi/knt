@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Register.css"
-import {Link} from "react-router-dom";
+import {Link, Navigate, redirect, useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
+import axios from "axios";
 
 function ChoosePass() {
     let checkPass = false
@@ -11,6 +12,17 @@ function ChoosePass() {
     const [pass, setPass] = useState('');
     const [repeatPass, setRepeatPass] = useState('');
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [disable , setDisable] = useState(true)
+    const [isRegister , setRegister] = useState(false)
+    const navigate = useNavigate();
+    useEffect(() => {
+        if(isRegister) {
+            navigate("/Login")
+        }
+    })
+
+    let phone_number = sessionStorage.getItem('phone_number');
+    sessionStorage.setItem('password',pass)
 
     const CheckPass = (event) => {
         setPass(event.target.value);
@@ -48,23 +60,41 @@ function ChoosePass() {
         }
         Check()
     }
+
+    const HandleSubmit = (event) => {
+        event.preventDefault()
+        axios
+            .post("https://chuplon.iran.liara.run/api/v1/account/register/", {
+                phone_number:phone_number,
+                password:pass
+            })
+            .then((response) => {
+                console.log(response)
+                setRegister(true)
+
+            })
+            .catch((error) => {
+                if (error.response) {
+                    document.getElementsByClassName('errorType')[0].innerHTML = 'شماره تلفن یا رمز عبور اشتباه است'
+                } else if (error.request) {
+                    console.log(error.request);
+                    document.getElementsByClassName('errorType')[0].innerHTML = 'چنین کاربری یافت نشد'
+                } else {
+                    // console.log(error);
+                    document.getElementsByClassName('errorType')[0].innerHTML = 'چنین کاربری یافت نشد'
+                }
+            });
+    }
     const Check = () => {
         if (document.getElementsByClassName('checkIcon')[0].style.visibility === 'visible' &&
         document.getElementsByClassName('checkIcon')[1].style.visibility === 'visible') {
             document.getElementsByClassName('btn')[0].style.background = '#234E70FF'
-            document.getElementsByClassName('btn')[0].style.cursor = 'pointer'
-            document.getElementsByClassName('goAhead')[0].style.pointerEvents = ""
-            document.getElementsByClassName('disableLink')[0].style.display = 'none'
-            document.getElementsByClassName('goAhead')[0].style.display = 'inline'
-            document.getElementsByClassName('goAhead')[0].style.disabled = false
+            setDisable(false)
         }
         else {
             document.getElementsByClassName('btn')[0].style.background = 'grey'
             document.getElementsByClassName('btn')[0].style.cursor = 'auto'
-            document.getElementsByClassName('goAhead')[0].style.pointerEvents = "none"
-            document.getElementsByClassName('disableLink')[0].style.display = 'inline'
-            document.getElementsByClassName('goAhead')[0].style.display = 'none'
-            document.getElementsByClassName('goAhead')[0].style.disabled = true
+            setDisable(true)
         }
     }
 
@@ -80,7 +110,7 @@ function ChoosePass() {
                 <div className='registerForm'>
                     <div>
                         <p>ثبت نام</p>
-                        <form>
+                        <form onSubmit={HandleSubmit}>
                             <input placeholder='رمز خود را وارد کنید' type="password" value={pass} onChange={CheckPass}/>
                             <CheckIcon sx={{ fontSize: 16 }} className="checkIcon checkIcon1" />
                             <CloseIcon sx={{ fontSize: 16 }} className="closeIcon closeIcon1" />
@@ -89,9 +119,11 @@ function ChoosePass() {
                             <CheckIcon sx={{ fontSize: 16 }} className="checkIcon checkIcon2" />
                             <CloseIcon sx={{ fontSize: 16 }} className="closeIcon closeIcon2" />
                             <p className="error">&nbsp;</p>
-                            <button disabled={true} type='submit' className='btn'>
+                            <p className='errorType error'>&nbsp;</p>
+                            <button disabled={disable} type='submit' className='btn'>
                                 <span className='disableLink'>ثبت نام</span>
-                                <Link to='/' className="goAhead">ثبت نام</Link></button>
+                                {/*<Link to='/' className="goAhead">ثبت نام</Link>*/}
+                            </button>
                         </form>
                     </div>
                 </div>

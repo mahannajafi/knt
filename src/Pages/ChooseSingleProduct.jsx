@@ -47,7 +47,7 @@ const ChooseSingleProduct = () => {
                     />
                     <div className="Choose__Box-title">{data.title}</div>
                     <div className="Choose__Box-price">
-                      10,900
+                      {data.get_avg_price.avg_price}
                       <div className="Choose__Box-price-thin">تومان</div>
                     </div>
                   </div>

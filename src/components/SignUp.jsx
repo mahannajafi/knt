@@ -2,13 +2,39 @@ import React from "react";
 import "./Register.css"
 import {Link} from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import axios from "axios";
 
 function SignUp() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const { register, handleSubmit, formState: { errors } } = useForm();
+    sessionStorage.setItem('phone_number',phoneNumber)
+
+    const HandleSubmit = () => {
+        axios
+            .post("https://chuplon.iran.liara.run/api/v1/account/register/", {
+                phone_number:phoneNumber,
+                password:"1234"
+            })
+            .then((response) => {
+                console.log(response);
+                console.log(phoneNumber)
+                alert("kmlokokr")
+            })
+            .catch((error) => {
+                if (error.response) {
+                    console.log(error.response);
+                    console.log("server responded");
+                } else if (error.request) {
+                    console.log("network error");
+                } else {
+                    console.log(error);
+                }
+            });
+    };
+
 
     const handleChange = (event) => {
         document.getElementsByClassName('closeIcon')[0].style.visibility = 'visible'
@@ -20,7 +46,6 @@ function SignUp() {
         document.getElementsByClassName('disableLink')[0].style.display = 'inline'
         document.getElementsByClassName('goAhead')[0].style.display = 'none'
         document.getElementsByClassName('goAhead')[0].style.disabled = true
-
         document.getElementsByClassName('error')[0].innerHTML = "شماره باید 11 رقمی باشد"
         let numbers = ['0' , '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9']
         setPhoneNumber(event.target.value);
@@ -66,14 +91,15 @@ function SignUp() {
                 <div className='registerForm'>
                     <div>
                         <p>ثبت نام</p>
-                        <form>
+                        <form onSubmit={HandleSubmit}>
                             <input placeholder='شماره همراه خود را وارد کنید' type="text" value={phoneNumber} onChange={handleChange}/>
                             <CheckIcon sx={{ fontSize: 16 }} className="checkIcon" />
                             <CloseIcon sx={{ fontSize: 16 }} className="closeIcon" />
                             <p className="error">&nbsp;</p>
                             <button disabled={true} type='submit' className='btn'>
                                 <span className='disableLink'>ارسال کد</span>
-                                <Link to='/SendCode' className="goAhead">ارسال کد</Link></button>
+                                <Link to='/SendCode' className="goAhead">ارسال کد</Link>
+                            </button>
                         </form>
                     </div>
                 </div>
