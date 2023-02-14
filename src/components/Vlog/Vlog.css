@@ -1,0 +1,69 @@
+.vlog__container {
+  margin: 0 200px;
+  margin-bottom: 10rem;
+}
+.vlog__details {
+  height: 90vh;
+  border: 2px solid #dad5d5;
+  border-radius: 30px;
+  margin: 10px 30px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.18);
+}
+.vlog__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vlog__con {
+  display: flex;
+}
+.vlog__second {
+  height: 200px;
+  width: 250px;
+  margin: 0 25px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vlog__first {
+  height: 200px;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vlog__first img {
+  border-radius: 30px;
+  width: 400px;
+}
+.vlog__first-con {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+.vlog__first-but {
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+.vlog__first-dec {
+  text-align: justify;
+  color: #1e1e1e;
+}
+.vlog__second img{
+  height: 170px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.vlog__second-title{
+  margin: 5px 0;
+  font-size: 20px;
+}

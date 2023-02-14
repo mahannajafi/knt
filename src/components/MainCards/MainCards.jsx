@@ -1,8 +1,8 @@
 import "./MainCards.css";
-import card1 from "../assets/imgs/card-1.png";
-import card2 from "../assets/imgs/card-2.png";
-import card3 from "../assets/imgs/card-3.png";
-import card4 from "../assets/imgs/card-4.png";
+import card1 from "../../assets/imgs/card-1.png";
+import card2 from "../../assets/imgs/card-2.png";
+import card3 from "../../assets/imgs/card-3.png";
+import card4 from "../../assets/imgs/card-4.png";
 
 function MainCards() {
   return (

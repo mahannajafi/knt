@@ -1,5 +1,5 @@
 import './TitleCat.css'
-import more from '../assets/imgs/more.png'
+import more from '../../assets/imgs/more.png'
 const TitleCat = (props) => {
   return (
     <div className='titleCat__container'>

@@ -27,7 +27,7 @@ function Navbar() {
             <FontAwesomeIcon icon={faPenRuler} />
 
             <button className="headerUp__designBtn">
-              <Link className="headerUp__designBtnLink--primary" to="/Design">
+              <Link className="headerUp__designBtnLink--primary" to="/Learn">
                 طراحی کنید
               </Link>
             </button>

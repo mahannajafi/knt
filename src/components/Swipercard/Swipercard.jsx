@@ -1,6 +1,6 @@
 import "./Swipercard.css";
-import swishert from "../assets/imgs/swishert.png";
-import plus from "../assets/imgs/plus.png";
+import swishert from "../../assets/imgs/swishert.png";
+import plus from "../../assets/imgs/plus.png";
 
 const Swipercard = (props) => {
   return (

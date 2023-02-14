@@ -1,5 +1,5 @@
 import './Upgrade.css'
-import pic from '../assets/imgs/upgrade.png'
+import pic from '../../assets/imgs/upgrade.png'
 
 function Upgrade() {
   return (

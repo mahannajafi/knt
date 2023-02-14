@@ -1,21 +1,26 @@
-import Navbar from "../components/Navbar";
-import MiniNavbar from "../components/MiniNavbar";
-import ProductShowCase from "../components/Product/ProductShowCase";
-import ProductSellerBox from "../components/Product/ProductSellerBox";
-import Popular from "../components/Popular";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import MiniNavbar from "../components/MiniNavbar/MiniNavbar";
+import SingleProductShowCase from "../components/SingleProduct/ProductShowCase";
+import MainCards from "../components/MainCards/MainCards";
+import DesignerExplanation from "../components/SingleProduct/DesignerExplanation";
+import ProductFeatures from "../components/SingleProduct/ProductFeatures";
+import Popular from "../components/Popular/Popular";
+import UserComments from "../components/SingleProduct/UserComments";
+
+import Footer from "../components/Footer/Footer";
 
 const SingleProduct = () => {
   return (
     <>
       <Navbar />
       <MiniNavbar />
-      <ProductShowCase />
-      <ProductSellerBox />
-      <ProductSellerBox />
-      <ProductSellerBox />
-      <ProductSellerBox />
+      <SingleProductShowCase />
+      <MainCards />
+      <DesignerExplanation />
+      <ProductFeatures />
       <Popular />
+      <UserComments />
+
       <Footer />
     </>
   );
