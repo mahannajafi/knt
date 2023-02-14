@@ -1,4 +1,3 @@
-
 .headerUp {
   display: flex;
   justify-content: space-between;
@@ -68,10 +67,9 @@
   font-family: "vazir";
   cursor: pointer;
 }
-.headerUp__designBtnLink{
+.headerUp__designBtnLink {
   color: var(--second-color);
   text-decoration: none;
-
 }
 .headerUp__designBtnLink--primary {
   color: var(--main-color);
@@ -98,4 +96,16 @@
   color: var(--second-color);
   font-size: 20px;
   cursor: pointer;
+}
+.headerUp__user {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  border-radius: 50%;
+  width: 20px;
+}
+.headerUp__user2 {
+  background-color: var(--main-color);
+  color: var(--second-color);
+  border-radius: 50%;
+  width: 20px;
 }
