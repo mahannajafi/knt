@@ -1,19 +1,15 @@
 import "./DesignInfo.css";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const DesignInfo = () => {
-  const availableProductColors = [
-    "blue",
-    "cyan",
-    "green",
-    "red",
-    "orange",
-    "purple",
-    "pink",
-  ];
+const DesignInfo = ({ productID, providerID, availableProductColors }) => {
+  let { state } = useLocation();
+  const navigate = useNavigate();
 
+  const [data, setData] = useState([]);
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [productColors, setProductColors] = useState([]);
@@ -35,16 +31,32 @@ const DesignInfo = () => {
     }
   };
 
+  const JSON = {
+    name: productName,
+    description: productDescription,
+    blank_product: productID,
+    provider: providerID,
+    design_img: designFile,
+    sample_img: designedProductFile,
+    price: finalPrice,
+    colors: productColors,
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(
-      productName,
-      productDescription,
-      productColors,
-      finalPrice,
-      designFile,
-      designedProductFile
-    );
+    axios
+      .post(`https://chuplon.iran.liara.run/api/v1/product/`, JSON, {
+        headers: {
+          "content-type": "multipart/form-data",
+          Authorization: `jwt ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((response) => {
+        navigate("/home");
+      })
+      .catch((error) => {
+        navigate("/home");
+      });
   };
 
   return (
@@ -139,8 +151,12 @@ const DesignInfo = () => {
               طرح&nbsp;:
               <input
                 type="file"
-                value={designFile}
-                onChange={(event) => setDesignFile(event.target.files[0])}
+                onChange={(event) => {
+                  const formData = new FormData();
+                  formData.append("image", event.target.files[0]);
+                  event.preventDefault();
+                  setDesignFile(formData);
+                }}
                 className="design-info__form__label__input custom-file-input"
               />
             </label>
@@ -149,10 +165,12 @@ const DesignInfo = () => {
               محصول&nbsp;طراحی&nbsp;شده&nbsp;:
               <input
                 type="file"
-                value={designedProductFile}
-                onChange={(event) =>
-                  setDesignedProductFile(event.target.files[0])
-                }
+                onChange={(event) => {
+                  const formData = new FormData();
+                  formData.append("image", event.target.files[0]);
+                  event.preventDefault();
+                  setDesignedProductFile(formData);
+                }}
                 className="design-info__form__label__input custom-file-input"
               />
             </label>
