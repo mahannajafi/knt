@@ -1,42 +1,74 @@
 import "./ProductSellerBox.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faM, faL} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-const ProductSellerBox = () => {
+const ProductSellerBox = ({
+  providerName,
+  productDetails,
+  address,
+  prepTime,
+  price,
+  productID,
+  providerID,
+}) => {
+  const productColors = [];
+  productDetails.forEach((product) => {
+    let color = product.color.code.toLowerCase();
+    if (!productColors.includes(color)) {
+      productColors.push(color);
+    }
+  });
+
+  const productSizes = [];
+  productDetails.forEach((product) => {
+    let size = product.size.unit.toUpperCase();
+    if (!productSizes.includes(size)) {
+      productSizes.push(size);
+    }
+  });
+
   return (
     <>
       <div className="product-seller-box">
-        <h3 className="product-seller-box__title">نام تولید کننده</h3>
+        <h3 className="product-seller-box__title">{providerName}</h3>
         <div className="product-info">
           <div className="product-info-box product-seller-box__available-colors">
             رنگ های موجود
             <br />
-            <div className="color color--green"></div>
-            <div className="color color--red"></div>
-            <div className="color color--yellow"></div>
+            {productColors &&
+              productColors.map((colorCode) => (
+                <div
+                  className="color"
+                  style={{ backgroundColor: colorCode }}
+                ></div>
+              ))}
           </div>
           <div className="product-info-box product-seller-box__available-sizes">
             سایز های موجود
             <br />
-            <FontAwesomeIcon icon={faL} className="size" />
-            <FontAwesomeIcon icon={faM} className="size" />
+            {productSizes &&
+              productSizes.map((size) => <span class="size">{size}</span>)}
           </div>
           <div className="product-info-box product-seller-box__address">
             آدرس
             <br />
-            <div className="addressBox">تهران</div>
+            <div className="addressBox">{address}</div>
           </div>
           <div className="product-info-box product-seller-box__delivery-time">
             زمان آماده سازی
             <br />
-            <div className="delivery-time">سه روز</div>
+            <div className="delivery-time">{prepTime}</div>
           </div>
           <div className="product-info-box product-seller-box__price">
             قیمت:
-            <span className="price">۲۵۰۰۰ تومان</span>
+            <span className="price">{price} تومان</span>
             <button className="design-this-product-btn">
-              <Link className="design-this-product-btn__link" to="/Design">طراحی این محصول</Link>
+              <Link
+                className="design-this-product-btn__link"
+                to="/Design"
+                state={{ productID: productID, providerID: providerID, productColors: productColors }}
+              >
+                طراحی این محصول
+              </Link>
             </button>
           </div>
         </div>

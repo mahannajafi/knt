@@ -1,18 +1,35 @@
 import "./ShowCase.css";
-import sweatshirt from "../../assets/imgs/swishert.png";
+import React, { useState, useEffect } from "react";
 
-const ShowCase = () => {
+const ShowCase = ({ images, sampleImage }) => {
+  const [mainImageURL, setMainImageURL] = useState();
+
+  useEffect(() => {
+    if (images) setMainImageURL(images[0].image);
+  }, [images]);
+
   return (
     <>
       <div className="showcase">
         <div className="showcase__image-selection">
-          <div className="showcase__image-selection__first"></div>
-          <div className="showcase__image-selection__second"></div>
-          <div className="showcase__image-selection__third"></div>
+          {images &&
+            images.map((imageObject) => (
+              <img
+                src={imageObject.image}
+                alt="تصویر"
+                onClick={(event) => setMainImageURL(event.target.src)}
+              />
+            ))}
         </div>
 
         <div className="showcase__image-box">
-          <img src={sweatshirt} alt="" />
+          {images && mainImageURL && (
+            <img
+              src={mainImageURL}
+              alt="تصویر"
+              className="showcase__image-box__image"
+            />
+          )}
         </div>
 
         <div className="showcase__limits-description">
@@ -25,7 +42,9 @@ const ShowCase = () => {
             زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
             متخصصان را می طلبد.
           </p>
-          <button className="showcase__limits-description__btn">دانلود طرح خام</button>
+          <button className="showcase__limits-description__btn">
+            <a className="showcase__limits-description__btn__link" href={sampleImage} download>دانلود طرح خام</a>
+          </button>
         </div>
       </div>
     </>

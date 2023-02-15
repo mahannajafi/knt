@@ -1,27 +1,44 @@
 import "./RawProductShowCase.css";
-import sweatshirt from "../../assets/imgs/swishert.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from "react";
 
-const RawProductShowCase = () => {
+const RawProductShowCase = ({ title, images, features, rate }) => {
+  const [mainImageURL, setMainImageURL] = useState();
+
+  useEffect(() => {
+    if (images) setMainImageURL(images[0].image);
+  }, [images]);
+
   return (
     <>
       <div className="showcase">
         <div className="showcase__image-selection">
-          <div className="showcase__image-selection__first"></div>
-          <div className="showcase__image-selection__second"></div>
-          <div className="showcase__image-selection__third"></div>
+          {images &&
+            images.map((imageObject) => (
+              <img
+                src={imageObject.image}
+                alt="تصویر"
+                onClick={(event) => setMainImageURL(event.target.src)}
+              />
+            ))}
         </div>
 
         <div className="showcase__image-box">
-          <img src={sweatshirt} alt="" />
+          {images && mainImageURL && (
+            <img
+              src={mainImageURL}
+              alt="تصویر"
+              className="showcase__image-box__image"
+            />
+          )}
         </div>
 
         <div className="showcase__product-description">
           <div className="showcase__product-description__title-container">
-            <h3>نام محصول</h3>
-            <span className="score">
-              امتیاز
+            <h3>{title}</h3>
+            <span className="rate">
+              {rate}&nbsp;
               <FontAwesomeIcon icon={faStar} />
             </span>
           </div>
@@ -29,11 +46,12 @@ const RawProductShowCase = () => {
           <div className="showcase__product-description__attributes-container">
             <h4>ویژگی های محصول</h4>
             <ul className="product-attributes-container">
-              <li>لورم ایپسوم متن ساختگی</li>
-              <li>لورم ایپسوم متن ساختگی</li>
-              <li>لورم ایپسوم متن ساختگی</li>
-              <li>لورم ایپسوم متن ساختگی</li>
-              <li>لورم ایپسوم متن ساختگی</li>
+              {features &&
+                features.map((featureObject) => (
+                  <li>
+                    {featureObject.blank_prop.name} : {featureObject.value}
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

@@ -69,3 +69,8 @@
   margin: 20px auto;
   cursor: pointer;
 }
+
+.showcase__limits-description__btn__link {
+  color: var(--second-color);
+  text-decoration: none;
+}
