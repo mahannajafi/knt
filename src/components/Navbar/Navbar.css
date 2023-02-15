@@ -109,3 +109,17 @@
   border-radius: 50%;
   width: 20px;
 }
+
+.userDashboard {
+  text-decoration: none;
+  color: var(--main-color);
+  width: 20px;
+  height: 12px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.headerUp--icon {
+  color: var(--main-color);
+}

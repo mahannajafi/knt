@@ -48,7 +48,6 @@ function Login() {
     const CheckPhone = (event) => {
         document.getElementsByClassName('closeIcon')[0].style.visibility = 'visible'
         document.getElementsByClassName('checkIcon')[0].style.visibility = 'hidden'
-
         document.getElementsByClassName('error')[0].innerHTML = "شماره باید 11 رقمی باشد"
         let numbers = ['0' , '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9']
         setPhone(event.target.value);

@@ -171,7 +171,7 @@
 .checkIcon , .closeIcon {
     position: absolute;
     top: 16px;
-    right: 130px;
+    right: 25%;
     size: 6px;
     visibility: hidden;
 }

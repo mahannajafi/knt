@@ -27,7 +27,7 @@ function Navbar() {
         </div>
         <div className="headerUp__left">
           <div className="headerUp__design">
-            <FontAwesomeIcon icon={faPenRuler} />
+            <FontAwesomeIcon className='headerUp--icon' icon={faPenRuler} />
 
             <button className="headerUp__designBtn">
               <Link className="headerUp__designBtnLink--primary" to="/Learn">
@@ -41,7 +41,7 @@ function Navbar() {
                 <FontAwesomeIcon icon={faBell} />
               </div>
               <div className="headerUp__design headerUp__design-primary headerUp__user">
-                <FontAwesomeIcon icon={faUser} />
+                <Link className='userDashboard' to="./DesignerDashboard"><FontAwesomeIcon icon={faUser} /></Link>
               </div>
             </>
           )}
