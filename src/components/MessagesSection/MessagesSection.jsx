@@ -1,8 +1,8 @@
-import "./MyMessages.css"
-import DashboardMenu from "./DashboardMenu";
-import Message from "./Message";
+import "./MessagesSection.css"
+import DashboardMenu from "../DashboardMenu/DashboardMenu";
+import Message from "../Message/Message";
 
-function MyMessages() {
+function MessagesSection() {
     return(
         <>
             <div className="myMessagesContainer">
@@ -25,4 +25,4 @@ function MyMessages() {
     )
 }
 
-export default MyMessages;
+export default MessagesSection;

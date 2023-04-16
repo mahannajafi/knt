@@ -1,7 +1,7 @@
 import React from "react";
 import "./MyDesignProduct.css"
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import swishert from "../assets/imgs/swishert.png";
+import swishert from "../../assets/imgs/swishert.png";
 
 function MyDesignProduct({name , id , desc , minPrice , maxPrice}) {
     return (

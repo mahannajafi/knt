@@ -78,10 +78,10 @@ function ChoosePass() {
 
                             <input required placeholder='تکرار رمز خود را وارد کنید' type="password" name="repeatPass"
                                    onInput={(event)=>{setRepeatPass(event.target.value)}}
-                                   {...register('repeatPass' , {required:true , minLength:8})}/>
+                                   {...register('repeatPass' , {required:true , value:pass})}/>
                             <section className="error">
                                 {errors?.repeatPass && errors.repeatPass.type === "required" && <span>این قسمت  را پر کنید</span>}
-                                {errors.repeatPass && errors.repeatPass.type === "minLength" && <span>رمز عبور باید حداقل 8 کاراکتر باشد</span>}
+                                {errors.repeatPass && errors.repeatPass.type === "value" && <span>رمز و تکرار مطابقت ندارند</span>}
                             </section>
 
                             <button disabled={disable} className='btn' style={{

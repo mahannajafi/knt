@@ -1,5 +1,5 @@
 import "./DesignerDashboard.css"
-import DashboardMenu from "./DashboardMenu";
+import DashboardMenu from "../DashboardMenu/DashboardMenu";
 
 function DesignerDashboard() {
     return(
