@@ -14,33 +14,27 @@ import axios from "axios";
 function DashboardMenu() {
     const [count , setCount] = useState(1)
     const navigate = useNavigate();
-    useEffect(() => {
-        // if(count === 4) {
-        //     navigate("/MyDesigns")
-        // }
-        // else if(count === 6) {
-        //     navigate("/MyMessages")
-        // }
-        if(count === 7) {
-            axios
-                .post("https://chuplon.iran.liara.run/api/v1/account/logout/", {})
-                .then((response) => {
-                    localStorage.removeItem('token')
-                    console.log(response)
-                    navigate("/")
-                })
-                .catch((error) => {
-                    if (error.response) {
-                        console.log(error.response);
-                        console.log("server responded");
-                    } else if (error.request) {
-                        console.log("network error");
-                    } else {
-                        console.log(error);
-                    }
-                });
-        }
-    })
+    // useEffect(() => {
+    //     if(count === 7) {
+    //         axios
+    //             .post("https://chuplon.iran.liara.run/api/v1/account/logout/", {})
+    //             .then((response) => {
+    //                 localStorage.removeItem('token')
+    //                 console.log(response)
+    //                 navigate("/")
+    //             })
+    //             .catch((error) => {
+    //                 if (error.response) {
+    //                     console.log(error.response);
+    //                     console.log("server responded");
+    //                 } else if (error.request) {
+    //                     console.log("network error");
+    //                 } else {
+    //                     console.log(error);
+    //                 }
+    //             });
+    //     }
+    // })
 
     return (
         <>

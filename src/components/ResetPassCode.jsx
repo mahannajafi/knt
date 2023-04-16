@@ -5,27 +5,15 @@ import {useForm} from "react-hook-form";
 
 function ForgetPassword2() {
     const [code, setCode] = useState('');
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const handleRegistration = (data) => console.log(data)
+    const onErrors = errors => console.error(errors)
+    const [disable , setDisable] = useState(true)
 
-    const CheckCode = (event) => {
-        setCode(event.target.value);
-        if (event.target.value.length !== 5) {
-            document.getElementsByClassName('btn')[0].style.background = 'grey'
-            document.getElementsByClassName('btn')[0].style.cursor = 'auto'
-            document.getElementsByClassName('goAhead')[0].style.pointerEvents = "none"
-            document.getElementsByClassName('disableLink')[0].style.display = 'inline'
-            document.getElementsByClassName('goAhead')[0].style.display = 'none'
-            document.getElementsByClassName('goAhead')[0].style.disabled = true
-        }
-        else {
-            document.getElementsByClassName('btn')[0].style.background = '#234E70FF'
-            document.getElementsByClassName('btn')[0].style.cursor = 'pointer'
-            document.getElementsByClassName('goAhead')[0].style.pointerEvents = ""
-            document.getElementsByClassName('disableLink')[0].style.display = 'none'
-            document.getElementsByClassName('goAhead')[0].style.display = 'inline'
-            document.getElementsByClassName('goAhead')[0].style.disabled = false
-        }
-    };
+    const checkResetPassCodeForm = () => {
+        if (code.length === 5){setDisable(false)}
+        else {setDisable(true)}
+    }
 
     return (
         <>
@@ -33,12 +21,18 @@ function ForgetPassword2() {
                 <div className='loginForm'>
                     <div>
                         <p>بازیابی کلمه ی عبور</p>
-                        <form>
-                            <input placeholder='کد ارسال شده را وارد کنید' type="text" value={code} onChange={CheckCode}/>
-                            <p className="error">&nbsp;</p>
-                            <button disabled={true} type='submit' className='btn'>
-                                <span className='disableLink'>تایید کد</span>
-                                <Link to='/ResetPass' className="goAhead">تایید کد</Link></button>
+                        <form onSubmit={handleSubmit(handleRegistration , onErrors)} onChange={checkResetPassCodeForm}>
+                            <input required placeholder='کد ارسال شده را وارد کنید' type="text" name="code"
+                                   onInput={(event)=>{setCode(event.target.value)}} {...register('code' , {required:true})} />
+                            <section className="error">
+                                {errors?.phone && errors.phone.type === "required" && <span>این قسمت  را پر کنید</span>}
+                                {errors.phone && errors.phone.type === "minLength" && <span>شماره تلفن باید 11 رقمی باشد</span>}
+                                {errors.phone && errors.phone.type === "maxLength" && <span>شماره تلفن باید 11 رقمی باشد</span>}
+                            </section>
+                            <button disabled={disable} className='btn'
+                                    style={{color: !disable &&  "#FFF",
+                                        backgroundColor: !disable && "#234E70FF"}}
+                            >تایید کد</button>
                         </form>
                     </div>
                 </div>

@@ -1,31 +1,19 @@
 import React, {useState} from "react";
 import "./Register.css"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 
 function SendCode() {
     const [verificationCode, setVerificationCode] = useState('');
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const handleRegistration = (data) => console.log(data)
+    const onErrors = errors => console.error(errors)
+    const [disable , setDisable] = useState(true)
 
-    const handleChange = (event) => {
-        setVerificationCode(event.target.value);
-        if (event.target.value.length !== 5) {
-            document.getElementsByClassName('btn')[0].style.background = 'grey'
-            document.getElementsByClassName('btn')[0].style.cursor = 'auto'
-            document.getElementsByClassName('goAhead')[0].style.pointerEvents = "none"
-            document.getElementsByClassName('disableLink')[0].style.display = 'inline'
-            document.getElementsByClassName('goAhead')[0].style.display = 'none'
-            document.getElementsByClassName('goAhead')[0].style.disabled = true
-        }
-        else {
-            document.getElementsByClassName('btn')[0].style.background = '#234E70FF'
-            document.getElementsByClassName('btn')[0].style.cursor = 'pointer'
-            document.getElementsByClassName('goAhead')[0].style.pointerEvents = ""
-            document.getElementsByClassName('disableLink')[0].style.display = 'none'
-            document.getElementsByClassName('goAhead')[0].style.display = 'inline'
-            document.getElementsByClassName('goAhead')[0].style.disabled = false
-        }
-    };
+    const checkSendCodeForm = () => {
+        if (verificationCode.length === 5){setDisable(false)}
+        else {setDisable(true)}
+    }
 
     return (
         <>
@@ -39,13 +27,18 @@ function SendCode() {
                 <div className='registerForm'>
                     <div>
                         <p>ثبت نام</p>
-                        <form>
-                            <input placeholder='کد تایید را وارد کنید' type="text" value={verificationCode} onChange={handleChange}/>
-                            <p className="error">&nbsp;</p>
+                        <form onSubmit={handleSubmit(handleRegistration , onErrors)} onChange={checkSendCodeForm}>
+                            <input required placeholder='کد تایید را وارد کنید' type="text" name="code"
+                                   onInput={(event)=>{setVerificationCode(event.target.value)}}
+                                   {...register('code' , {required:true})} />
+                            <section className="error">
+                                {errors?.code && errors.code.type === "required" && <span>این قسمت  را پر کنید</span>}
+                            </section>
                             <span>کد را دریافت نکرده اید؟ <Link to="/SendCode" className='link'>ارسال مجدد کد</Link></span>
-                            <button disabled={true} type='submit' className='btn'>
-                                <span className='disableLink'>تایید</span>
-                                <Link to='/ChoosePass' className="goAhead">تایید</Link></button>
+                            <button disabled={disable} className='btn' style={{
+                                color: !disable &&  "#FFF",
+                                backgroundColor: !disable && "#234E70FF"}}
+                            >تایید</button>
                         </form>
                     </div>
                 </div>

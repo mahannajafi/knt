@@ -1,6 +1,6 @@
 import React from "react";
 import "./Register.css"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState , useEffect } from 'react';
 import CheckIcon from '@mui/icons-material/Check';
@@ -9,75 +9,39 @@ import axios from "axios";
 
 function SignUp() {
     const [phoneNumber, setPhoneNumber] = useState('');
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const handleRegistration = (data) => console.log(data)
+    const onErrors = errors => console.error(errors)
+    const [disable , setDisable] = useState(true)
     sessionStorage.setItem('phone_number',phoneNumber)
 
-    const HandleSubmit = () => {
-        axios
-            .post("https://chuplon.iran.liara.run/api/v1/account/register/", {
-                phone_number:phoneNumber,
-                password:"1234"
-            })
-            .then((response) => {
-                console.log(response);
-                console.log(phoneNumber)
-                alert("kmlokokr")
-            })
-            .catch((error) => {
-                if (error.response) {
-                    console.log(error.response);
-                    console.log("server responded");
-                } else if (error.request) {
-                    console.log("network error");
-                } else {
-                    console.log(error);
-                }
-            });
-    };
+    // const HandleSubmit = () => {
+        // axios
+        //     .post("https://chuplon.iran.liara.run/api/v1/account/register/", {
+        //         phone_number:phoneNumber,
+        //         password:"1234"
+        //     })
+        //     .then((response) => {
+        //         console.log(response);
+        //         console.log(phoneNumber)
+        //         alert("kmlokokr")
+        //     })
+        //     .catch((error) => {
+        //         if (error.response) {
+        //             console.log(error.response);
+        //             console.log("server responded");
+        //         } else if (error.request) {
+        //             console.log("network error");
+        //         } else {
+        //             console.log(error);
+        //         }
+        //     });
+    // };
 
-
-    const handleChange = (event) => {
-        document.getElementsByClassName('closeIcon')[0].style.visibility = 'visible'
-        document.getElementsByClassName('checkIcon')[0].style.visibility = 'hidden'
-        document.getElementsByClassName('btn')[0].style.background = 'grey'
-        document.getElementsByClassName('btn')[0].style.cursor = 'auto'
-        document.getElementsByClassName('goAhead')[0].style.pointerEvents = "none"
-        document.getElementsByClassName('error')[0].innerHTML = "&nbsp;"
-        document.getElementsByClassName('disableLink')[0].style.display = 'inline'
-        document.getElementsByClassName('goAhead')[0].style.display = 'none'
-        document.getElementsByClassName('goAhead')[0].style.disabled = true
-        document.getElementsByClassName('error')[0].innerHTML = "شماره باید 11 رقمی باشد"
-        let numbers = ['0' , '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9']
-        setPhoneNumber(event.target.value);
-        for ( let i = 0 ; i < event.target.value.length ; i ++ ){
-            let valid = false
-            for(let j = 0 ; j < numbers.length ; j ++ ){
-                if (event.target.value[i] === numbers[j]) {
-                    valid = true
-                }
-            }
-            if (valid === false) {
-                document.getElementsByClassName('error')[0].innerHTML =  "کاراکتر "+ i +" ام عدد نیست"
-            }
-        }
-        if (event.target.value[0] !== '0'){
-            document.getElementsByClassName('error')[0].innerHTML = "شماره باید با صفر شروع شود"
-        }
-        else if (event.target.value[1] !== '9' && event.target.value[1] !== ""){
-            document.getElementsByClassName('error')[0].innerHTML = "دومین کاراکتر باید 9 باشد"
-        }
-        else if (event.target.value.length === 11) {
-            document.getElementsByClassName('btn')[0].style.background = '#234E70FF'
-            document.getElementsByClassName('btn')[0].style.cursor = 'pointer'
-            document.getElementsByClassName('goAhead')[0].style.pointerEvents = ""
-            document.getElementsByClassName('error')[0].innerHTML = "&nbsp;"
-            document.getElementsByClassName('checkIcon')[0].style.visibility = 'visible'
-            document.getElementsByClassName('closeIcon')[0].style.visibility = 'hidden'
-            document.getElementsByClassName('disableLink')[0].style.display = 'none'
-            document.getElementsByClassName('goAhead')[0].style.display = 'inline'
-            document.getElementsByClassName('goAhead')[0].style.disabled = false
-        }
-    };
+    const checkSignUpForm = () => {
+        if (phoneNumber.length === 11){setDisable(false)}
+        else {setDisable(true)}
+    }
 
     return (
         <>
@@ -91,15 +55,19 @@ function SignUp() {
                 <div className='registerForm'>
                     <div>
                         <p>ثبت نام</p>
-                        <form onSubmit={HandleSubmit}>
-                            <input placeholder='شماره همراه خود را وارد کنید' type="text" value={phoneNumber} onChange={handleChange}/>
-                            <CheckIcon sx={{ fontSize: 16 }} className="checkIcon" />
-                            <CloseIcon sx={{ fontSize: 16 }} className="closeIcon" />
-                            <p className="error">&nbsp;</p>
-                            <button disabled={true} type='submit' className='btn'>
-                                <span className='disableLink'>ارسال کد</span>
-                                <Link to='/SendCode' className="goAhead">ارسال کد</Link>
-                            </button>
+                        <form onSubmit={handleSubmit(handleRegistration , onErrors)} onChange={checkSignUpForm}>
+                            <input required placeholder='شماره همراه خود را وارد کنید' type="number" name="phoneNumber"
+                                   onInput={(event)=>{setPhoneNumber(event.target.value)}}
+                                   {...register('phoneNumber' , {required:true , minLength:11 , maxLength:11})} />
+                            <section className="error">
+                                {errors?.phoneNumber && errors.phoneNumber.type === "required" && <span>این قسمت  را پر کنید</span>}
+                                {errors.phoneNumber && errors.phoneNumber.type === "minLength" && <span>شماره تلفن باید 11 رقمی باشد</span>}
+                                {errors.phoneNumber && errors.phoneNumber.type === "maxLength" && <span>شماره تلفن باید 11 رقمی باشد</span>}
+                            </section>
+                            <button disabled={disable} className='btn' style={{
+                                color: !disable &&  "#FFF",
+                                backgroundColor: !disable && "#234E70FF"}}
+                            >ارسال کد</button>
                         </form>
                     </div>
                 </div>
