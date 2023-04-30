@@ -1,0 +1,14 @@
+.order .orderTitle {
+    background-color: var(--main-color);
+    padding: 6px 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+.order .orderTitle h4 {
+    color: var(--second-color);
+    margin-bottom: 6px;
+}
+
+.order .orderTitle h5 {
+    color: #FFF;
+}

@@ -5,6 +5,7 @@ import SingleRawProduct from "./Pages/SingleRawProduct"
 import MyMessages from "./Pages/MyMessages";
 import MyDesigns from "./Pages/MyDesigns";
 import MySaleStatistics from "./Pages/MySaleStatistics";
+import MyOrders from "./Pages/MyOrders";
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MiniNavbar from './components/MiniNavbar/MiniNavbar';
@@ -43,6 +44,7 @@ function App() {
           <Route path="MyMessages" element={<MyMessages />}></Route>
           <Route path="MyDesigns" element={<MyDesigns />}></Route>
           <Route path="MySaleStatistics" element={<MySaleStatistics />}></Route>
+          <Route path="MyOrders" element={<MyOrders />}></Route>
           <Route path='Learn' element={<Learn />}></Route>
           <Route path='ChooseSingleProduct' element={<ChooseSingleProduct />}></Route>
         </Route>
