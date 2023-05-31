@@ -1,5 +1,6 @@
 import "./LoginForm.css"
 import { useForm } from "react-hook-form";
+import {Link} from "react-router-dom"
 
 function LoginForm() {
     const {register, handleSubmit, formState: { errors },} = useForm();
@@ -67,7 +68,7 @@ function LoginForm() {
                     {errors.password ? (
                         <p className="loginError">{errors.password.message}</p>
                     ) : ("")}
-                    <p className="forgetPassText">رمز خود را فراموش کرده اید؟<span>بازیابی کلمه عبور</span></p>
+                    <p className="forgetPassText">رمز خود را فراموش کرده اید؟<Link className="linkedText">بازیابی کلمه عبور</Link></p>
                     <button className="loginButton">ورود</button>
                 </form>
             </div>

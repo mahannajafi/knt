@@ -20,6 +20,7 @@ import Login from "./Pages/Login";
 import ForgetPass from "./Pages/ForgetPass";
 import RecoveryPass from "./Pages/RecoveryPass";
 import Register from "./Pages/Register";
+import VerificationCode from "./Pages/VereficationCode";
 // import ResetPassCode from "./components/ResetPassCode";
 // import ResetPass from "./components/ResetPass";
 import DesignerDashboard from "./components/Dashboard/DesignerDashboard";
@@ -47,6 +48,7 @@ function App() {
           <Route path="ForgetPass" element={<ForgetPass />}></Route>
           <Route path="RecoveryPass" element={<RecoveryPass />}></Route>
           <Route path="Register" element={<Register />}></Route>
+          <Route path="VerificationCode" element={<VerificationCode />}></Route>
           {/*<Route path="ResetPassCode" element={<ResetPassCode />}></Route>*/}
           {/*<Route path="ResetPass" element={<ResetPass />}></Route>*/}
           <Route path="DesignerDashboard" element={<DesignerDashboard />}></Route>
