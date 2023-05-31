@@ -1,204 +1,204 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
 
-.loginContainer {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-}
+/*.loginContainer {*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*}*/
 
-.loginForm , .loginText {
-    width: 50%;
-    height: 100vh;
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
+/*.loginForm , .loginText {*/
+/*    width: 50%;*/
+/*    height: 100vh;*/
+/*    position: relative;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
 
-.loginForm {
-    background-color: #FFF;
-}
+/*.loginForm {*/
+/*    background-color: #FFF;*/
+/*}*/
 
-.loginText {
-    background-color: var(--main-color);
-}
+/*.loginText {*/
+/*    background-color: var(--main-color);*/
+/*}*/
 
-.loginForm div , .loginText div {
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    top: 15%;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    font-size: 2rem;
-    box-shadow: 0 0 20px #333333;
-}
+/*.loginForm div , .loginText div {*/
+/*    width: 70%;*/
+/*    height: 70%;*/
+/*    position: absolute;*/
+/*    top: 15%;*/
+/*    display: flex;*/
+/*    align-content: center;*/
+/*    flex-wrap: wrap;*/
+/*    gap: 2rem;*/
+/*    font-size: 2rem;*/
+/*    box-shadow: 0 0 20px #333333;*/
+/*}*/
 
-.loginForm div {
-    left: 0;
-    flex-direction: column;
-    justify-content: start;
-    border-radius: 0 6px 6px 0;
-}
+/*.loginForm div {*/
+/*    left: 0;*/
+/*    flex-direction: column;*/
+/*    justify-content: start;*/
+/*    border-radius: 0 6px 6px 0;*/
+/*}*/
 
-.loginText div {
-    color: var(--second-color);
-    right: 0;
-    justify-content: center;
-    border-radius: 6px 0 0 6px;
-}
+/*.loginText div {*/
+/*    color: var(--second-color);*/
+/*    right: 0;*/
+/*    justify-content: center;*/
+/*    border-radius: 6px 0 0 6px;*/
+/*}*/
 
-.loginForm div p , .loginText div p {
-    text-align: center;
-    font-weight: bold;
-}
+/*.loginForm div p , .loginText div p {*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*}*/
 
-.loginForm div p {
-    padding: 60px 0 40px 0;
-    color: var(--main-color);
-}
+/*.loginForm div p {*/
+/*    padding: 60px 0 40px 0;*/
+/*    color: var(--main-color);*/
+/*}*/
 
-.loginText div p {
-    width: 100%;
-}
+/*.loginText div p {*/
+/*    width: 100%;*/
+/*}*/
 
-.loginForm div input {
-    width: 300px;
-    height: 50px;
-    border-radius: 60px;
-    border: none;
-    box-shadow: 0 0 10px #949494 inset;
-    padding: 0 20px;
-    text-align: center;
-    background-color: #FFF;
-    margin: 8px;
-    /*margin-bottom: 20px;*/
-}
+/*.loginForm div input {*/
+/*    width: 300px;*/
+/*    height: 50px;*/
+/*    border-radius: 60px;*/
+/*    border: none;*/
+/*    box-shadow: 0 0 10px #949494 inset;*/
+/*    padding: 0 20px;*/
+/*    text-align: center;*/
+/*    background-color: #FFF;*/
+/*    margin: 8px;*/
+/*    !*margin-bottom: 20px;*!*/
+/*}*/
 
-.loginForm div input::placeholder {
-    text-align: center;
-    font-weight: 700;
-    font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
-}
+/*.loginForm div input::placeholder {*/
+/*    text-align: center;*/
+/*    font-weight: 700;*/
+/*    font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';*/
+/*}*/
 
-.loginForm div section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/*.loginForm div section {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
 
-.loginText div button {
-    padding: 4px 40px 8px 40px;
-    border-radius: 20px;
-    border: 1px solid var(--second-color);
-    background-color: var(--main-color);
-    font-size: 1.1rem;
-    color: var(--second-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: bold;
-}
+/*.loginText div button {*/
+/*    padding: 4px 40px 8px 40px;*/
+/*    border-radius: 20px;*/
+/*    border: 1px solid var(--second-color);*/
+/*    background-color: var(--main-color);*/
+/*    font-size: 1.1rem;*/
+/*    color: var(--second-color);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    cursor: pointer;*/
+/*    font-weight: bold;*/
+/*}*/
 
-.loginForm span {
-    font-size: 0.6rem;
-    text-align: center;
-}
+/*.loginForm span {*/
+/*    font-size: 0.6rem;*/
+/*    text-align: center;*/
+/*}*/
 
-.loginForm span .link {
-    color: deepskyblue;
-    text-decoration: none;
-    font-weight: bold;
-}
+/*.loginForm span .link {*/
+/*    color: deepskyblue;*/
+/*    text-decoration: none;*/
+/*    font-weight: bold;*/
+/*}*/
 
-.reg {
-    text-decoration: none;
-}
+/*.reg {*/
+/*    text-decoration: none;*/
+/*}*/
 
-.loginForm span {
-    font-size: 0.6rem;
-    text-align: center;
-    width: 100%;
-}
+/*.loginForm span {*/
+/*    font-size: 0.6rem;*/
+/*    text-align: center;*/
+/*    width: 100%;*/
+/*}*/
 
-.loginForm span .link {
-    color: deepskyblue;
-    text-decoration: none;
-    font-weight: bold;
-}
+/*.loginForm span .link {*/
+/*    color: deepskyblue;*/
+/*    text-decoration: none;*/
+/*    font-weight: bold;*/
+/*}*/
 
-.log {
-    text-decoration: none;
-}
+/*.log {*/
+/*    text-decoration: none;*/
+/*}*/
 
-.loginForm form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+/*.loginForm form {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    position: relative;*/
+/*}*/
 
-.loginForm .error {
-    width: 100%;
-    height: 20px;
-    font-size: 10px;
-    color: red;
-}
+/*.loginForm .error {*/
+/*    width: 100%;*/
+/*    height: 20px;*/
+/*    font-size: 10px;*/
+/*    color: red;*/
+/*}*/
 
-.loginForm button {
-    border-radius: 40px;
-    border: none;
-    background-color: gray;
-    color: #FFF;
-    text-align: center;
-    padding: 10px 30px;
-    font-weight: bold;
-    margin-top: 10px;
-    /*margin: 20px auto 0 auto;*/
-}
+/*.loginForm button {*/
+/*    border-radius: 40px;*/
+/*    border: none;*/
+/*    background-color: gray;*/
+/*    color: #FFF;*/
+/*    text-align: center;*/
+/*    padding: 10px 30px;*/
+/*    font-weight: bold;*/
+/*    margin-top: 10px;*/
+/*    !*margin: 20px auto 0 auto;*!*/
+/*}*/
 
-.loginForm button .goAhead {
-    text-decoration: none;
-    color: var(--second-color);
-    display: none;
-}
+/*.loginForm button .goAhead {*/
+/*    text-decoration: none;*/
+/*    color: var(--second-color);*/
+/*    display: none;*/
+/*}*/
 
-.checkIcon , .closeIcon {
-    position: absolute;
-    top: 16px;
-    right: 25%;
-    size: 6px;
-    visibility: hidden;
-}
+/*.checkIcon , .closeIcon {*/
+/*    position: absolute;*/
+/*    top: 16px;*/
+/*    right: 25%;*/
+/*    size: 6px;*/
+/*    visibility: hidden;*/
+/*}*/
 
-.checkIcon {
-    color: green;
-}
+/*.checkIcon {*/
+/*    color: green;*/
+/*}*/
 
-.closeIcon {
-    color: red;
-}
+/*.closeIcon {*/
+/*    color: red;*/
+/*}*/
 
-.checkIcon2 , .closeIcon2{
-    top: 102px;
-}
+/*.checkIcon2 , .closeIcon2{*/
+/*    top: 102px;*/
+/*}*/
 
-.btn .disableLink {
-    font-size: 13px;
-}
+/*.btn .disableLink {*/
+/*    font-size: 13px;*/
+/*}*/
 
-.errorType {
-    font-size: 16px !important;
-    color: red !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-}
+/*.errorType {*/
+/*    font-size: 16px !important;*/
+/*    color: red !important;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding: 20px 0;*/
+/*}*/

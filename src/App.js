@@ -14,7 +14,8 @@ import Footer from './components/Footer/Footer';
 import SignUp from "./components/SignUp";
 import SendCode from "./components/SendCode";
 import ChoosePass from "./components/ChoosePass";
-import Login from "./components/Login";
+// import Login from "./components/Login";
+import Login from "./Pages/Login";
 import ForgetPass from "./components/ForgetPass";
 import ResetPassCode from "./components/ResetPassCode";
 import ResetPass from "./components/ResetPass";
@@ -22,6 +23,7 @@ import DesignerDashboard from "./components/Dashboard/DesignerDashboard";
 import Learn from './components/Learn/Learn';
 import ChooseSingleProduct from './Pages/ChooseSingleProduct';
 import Basket from "./Pages/Basket";
+import ChooseAddress from "./Pages/ChooseAddress";
 
 function App() {
   return (
@@ -51,6 +53,7 @@ function App() {
           <Route path='Learn' element={<Learn />}></Route>
           <Route path='ChooseSingleProduct' element={<ChooseSingleProduct />}></Route>
           <Route path="Basket" element={<Basket />}></Route>
+          <Route path="chooseAddress" element={<ChooseAddress />}></Route>
         </Route>
 
       </Routes >

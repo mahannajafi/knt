@@ -4,7 +4,7 @@ import BasketProduct from "./BasketProduct";
 import emptyBasketImage from "../../assets/imgs/empty-basket.png"
 
 function BasketContent() {
-    const [isEmpty , setEmpty] = useState(false)
+    const [isEmpty , setEmpty] = useState(true)
 
     return (
         <div className="basket">
