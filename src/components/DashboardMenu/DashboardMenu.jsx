@@ -44,12 +44,18 @@ function DashboardMenu() {
                 <small>موجودی:1 میلیارد</small>
                 <button>برداشت</button>
                 <ul>
-                    <li onClick={() => setCount(1)}><Link className='dashboard' to="/DesignerDashboard"><PersonIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;اطلاعات کاربری</Link></li>
-                    <li onClick={() => setCount(2)}><MapsHomeWorkIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;ادرس های من</li>
-                    <li onClick={() => setCount(3)}><Link className='dashboard' to="/MyOrders"><WorkOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;سفارش های من</Link></li>
-                    <li onClick={() => setCount(4)}><Link className='dashboard' to="/MyDesigns"><DesignServicesIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;طرح های من</Link></li>
-                    <li onClick={() => setCount(5)}><Link className='dashboard' to="/MySaleStatistics"><EqualizerIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;آمار فروش</Link></li>
-                    <li onClick={() => setCount(6)}><Link className='dashboard' to="/MyMessages"><MailOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;پیام های من</Link></li>
+                    <li onClick={() => setCount(1)}><Link className='dashboard' to="/DesignerDashboard">
+                        <PersonIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;اطلاعات کاربری</Link></li>
+                    <li onClick={() => setCount(2)}><Link className='dashboard' to="/MyAddresses">
+                        <MapsHomeWorkIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;ادرس های من</Link></li>
+                    <li onClick={() => setCount(3)}><Link className='dashboard' to="/MyOrders">
+                        <WorkOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;سفارش های من</Link></li>
+                    <li onClick={() => setCount(4)}><Link className='dashboard' to="/MyDesigns">
+                        <DesignServicesIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;طرح های من</Link></li>
+                    <li onClick={() => setCount(5)}><Link className='dashboard' to="/MySaleStatistics">
+                        <EqualizerIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;آمار فروش</Link></li>
+                    <li onClick={() => setCount(6)}><Link className='dashboard' to="/MyMessages">
+                        <MailOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;پیام های من</Link></li>
                     <li onClick={() => setCount(7)}><LogoutIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;خروج</li>
                 </ul>
                 <button>اکانت ویژه</button>

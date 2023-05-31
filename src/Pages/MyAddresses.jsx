@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
 import MiniNavbar from "../components/MiniNavbar/MiniNavbar";
-import OrdersSection from "../components/OrdersSection/OrdersSection";
+import Addresses from "../components/Addresses/Addresses";
 import Footer from "../components/Footer/Footer";
 
 function MyAddresses() {
@@ -8,7 +8,7 @@ function MyAddresses() {
         <>
             <Navbar />
             <MiniNavbar />
-            <OrdersSection />
+            <Addresses />
             <Footer />
         </>
     )
