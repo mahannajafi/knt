@@ -55,7 +55,7 @@ function Navbar() {
                   ورود
                 </Link>
                 &nbsp;|&nbsp;
-                <Link className="headerUp__designBtnLink" to="/SignUp">
+                <Link className="headerUp__designBtnLink" to="/Register">
                   ثبت نام
                 </Link>
               </button>

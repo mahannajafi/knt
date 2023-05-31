@@ -21,6 +21,7 @@ import Learn from './components/Learn/Learn';
 import ChooseSingleProduct from './Pages/ChooseSingleProduct';
 import Basket from "./Pages/Basket";
 import ChooseAddress from "./Pages/ChooseAddress";
+import ProviderDashboard from "./Pages/ProviderDashboard";
 
 function App() {
   return (
@@ -39,8 +40,6 @@ function App() {
           <Route path="VerificationCode" element={<VerificationCode />}></Route>
           <Route path="SetPass" element={<SetPass />}></Route>
           <Route path="ProviderLogin" element={<ProviderLogin />}></Route>
-          {/*<Route path="ResetPassCode" element={<ResetPassCode />}></Route>*/}
-          {/*<Route path="ResetPass" element={<ResetPass />}></Route>*/}
           <Route path="DesignerDashboard" element={<DesignerDashboard />}></Route>
           <Route path="MyMessages" element={<MyMessages />}></Route>
           <Route path="MyDesigns" element={<MyDesigns />}></Route>
@@ -51,6 +50,7 @@ function App() {
           <Route path='ChooseSingleProduct' element={<ChooseSingleProduct />}></Route>
           <Route path="Basket" element={<Basket />}></Route>
           <Route path="ChooseAddress" element={<ChooseAddress />}></Route>
+          <Route path="ProviderDashboard" element={<ProviderDashboard />}></Route>
         </Route>
 
       </Routes >

@@ -29,9 +29,8 @@ function Address({productImage , providerName , salesNumber , productPrice}) {
                             <p>الهام ظهیر</p>
                         </div>
                     </div>
-                    <div className="addressLocation">
-
-                    </div>
+                        <iframe className="addressLocation"
+                            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1511.0223042248701!2d11.145848269494113!3d52.732572334659714!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfa!2snl!4v1685549452683!5m2!1sfa!2snl"></iframe>
                 </div>
             </div>
         </>

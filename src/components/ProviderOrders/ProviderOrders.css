@@ -1,0 +1,135 @@
+.providerOrders {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.providerOrderSection {
+    width: 49%;
+    margin-bottom: 20px;
+}
+
+.providerOrderTitle {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.providerOrderDetails {
+    padding: 10px 20px;
+}
+
+.providerOrderImage {
+    width: 60%;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20%;
+}
+
+.downloadImageIcon {
+    border: none;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.ProviderOrderColor {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: yellow;
+    margin-right: 6px;
+}
+
+.ProviderOrderColorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+}
+
+.providerOrderStatus {
+    width: 100%;
+    border: none;
+    margin-top: 8px;
+    font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
+}
+
+.providerOrderStatus > option {
+    font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
+}
+
+.providerOrderButton {
+    border: none;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+    width: 40%;
+    margin-right: 30%;
+    cursor: pointer;
+}
+
+.providerAlert {
+    width: 30%;
+    height: 24%;
+    background-color: #FFF;
+    z-index: 1;
+    position: fixed;
+    top: 37%;
+    left: 35%;
+    display: none;
+    transition: 1s;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #343434;
+    margin-bottom: 20px;
+}
+
+.providerAlertHeader {
+    padding: 10px 40% 10px 20px;
+    background-color: var(--main-color);
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--second-color);
+}
+
+.orderTrackForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.orderTrackForm > label {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: start;
+}
+
+.orderTrackForm > textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: none;
+}
+
+.orderTrackButton {
+    margin: 10px auto;
+    display: flex;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+}

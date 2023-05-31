@@ -10,10 +10,15 @@ import EqualizerIcon from '@mui/icons-material/Equalizer';
 import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
+import CloseIcon from "@mui/icons-material/Close";
 
 function DashboardMenu() {
     const [count , setCount] = useState(1)
+    const [messageNumber , setMessageMessageNumber] = useState(2)
+    const [isDesigner , setDesigner] = useState(false)
+    const [isClose , setClose] = useState(true)
     const navigate = useNavigate();
+
     // useEffect(() => {
     //     if(count === 7) {
     //         axios
@@ -50,15 +55,25 @@ function DashboardMenu() {
                         <MapsHomeWorkIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;ادرس های من</Link></li>
                     <li onClick={() => setCount(3)}><Link className='dashboard' to="/MyOrders">
                         <WorkOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;سفارش های من</Link></li>
-                    <li onClick={() => setCount(4)}><Link className='dashboard' to="/MyDesigns">
+                    <li onClick={() => setCount(4)} style={{display: !isDesigner && "none"}}><Link className='dashboard' to="/MyDesigns">
                         <DesignServicesIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;طرح های من</Link></li>
-                    <li onClick={() => setCount(5)}><Link className='dashboard' to="/MySaleStatistics">
+                    <li onClick={() => setCount(5)} style={{display: !isDesigner && "none"}}><Link className='dashboard' to="/MySaleStatistics">
                         <EqualizerIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;آمار فروش</Link></li>
                     <li onClick={() => setCount(6)}><Link className='dashboard' to="/MyMessages">
-                        <MailOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;پیام های من</Link></li>
+                        <MailOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;پیام های من
+                        {messageNumber !== 0 ? <div className="numberOfMessages">2</div> : ""}</Link></li>
                     <li onClick={() => setCount(7)}><LogoutIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;خروج</li>
                 </ul>
-                <button>اکانت ویژه</button>
+                {isDesigner ? <button>اکانت ویژه</button> : <button onClick={()=>setClose(false)}>ارتقا به طراح</button>}
+                <div className="upgradeToDesigner" style={{display: (isClose === false) && "block"}}>
+                    <div className="upgradeToDesignerHeader">
+                        <p>ارتقا به طراح</p>
+                        <CloseIcon onClick={()=>setClose(true)} />
+                    </div>
+                    <p className="upgradeToDesignerText">برای دسترس به بخش طراحی ابتدا لازم است اکانت خود را به طراح ارتقا دهید.
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخموجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                    <button className="upgradeToDesignerButton">انتقال به سامانه ی احراز هویت</button>
+                </div>
             </div>
         </>
     )

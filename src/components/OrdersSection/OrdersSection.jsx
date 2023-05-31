@@ -9,8 +9,8 @@ function OrdersSection() {
                 <DashboardMenu />
                 <div className="orders">
                     <h3>سفارش های من</h3>
-                    <Orders />
-                    <Orders />
+                    <Orders orderStatus={false} />
+                    <Orders orderStatus={true} />
                 </div>
             </div>
         </>

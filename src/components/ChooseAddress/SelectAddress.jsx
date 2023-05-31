@@ -51,7 +51,10 @@ function SelectAddress() {
                         <div className="chooseTime"><div className="selectDay" style={{borderColor: (selectedTime === 2) && "#234E70FF"}}
                                                          onClick={()=>setSelectedTime(2)}></div>{"ساعت 15 الی 18"}</div>
                     </>}
-
+                {/*<iframe src="https://goo.gl/maps/iGqdotY1Ux563Vxa6"></iframe>*/}
+                {/*<iframe*/}
+                {/*    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1511.0223042248701!2d11.145848269494113!3d52.732572334659714!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfa!2snl!4v1685549452683!5m2!1sfa!2snl"*/}
+                {/*    width="600" height="450"></iframe>*/}
             </div>
         </div>
     )
