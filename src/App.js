@@ -11,15 +11,16 @@ import MyAddresses from "./Pages/MyAddresses";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MiniNavbar from './components/MiniNavbar/MiniNavbar';
 import Footer from './components/Footer/Footer';
-import SignUp from "./components/SignUp";
-import SendCode from "./components/SendCode";
-import ChoosePass from "./components/ChoosePass";
+// import SignUp from "./components/SignUp";
+// import SendCode from "./components/SendCode";
+// import ChoosePass from "./components/ChoosePass";
 // import Login from "./components/Login";
 import Login from "./Pages/Login";
 // import ForgetPassForm from "./components/ForgetPass";
 import ForgetPass from "./Pages/ForgetPass";
-import ResetPassCode from "./components/ResetPassCode";
-import ResetPass from "./components/ResetPass";
+import RecoveryPass from "./Pages/RecoveryPass";
+// import ResetPassCode from "./components/ResetPassCode";
+// import ResetPass from "./components/ResetPass";
 import DesignerDashboard from "./components/Dashboard/DesignerDashboard";
 import Learn from './components/Learn/Learn';
 import ChooseSingleProduct from './Pages/ChooseSingleProduct';
@@ -38,13 +39,14 @@ function App() {
           <Route path='SingleRawProduct' element={<SingleRawProduct />} />
 
           <Route path='Design' element={<Design />} />
-          <Route path="SignUp" element={<SignUp />}></Route>
-          <Route path="SendCode" element={<SendCode />}></Route>
-          <Route path="ChoosePass" element={<ChoosePass />}></Route>
+          {/*<Route path="SignUp" element={<SignUp />}></Route>*/}
+          {/*<Route path="SendCode" element={<SendCode />}></Route>*/}
+          {/*<Route path="ChoosePass" element={<ChoosePass />}></Route>*/}
           <Route path="Login" element={<Login />}></Route>
           <Route path="ForgetPass" element={<ForgetPass />}></Route>
-          <Route path="ResetPassCode" element={<ResetPassCode />}></Route>
-          <Route path="ResetPass" element={<ResetPass />}></Route>
+          <Route path="RecoveryPass" element={<RecoveryPass />}></Route>
+          {/*<Route path="ResetPassCode" element={<ResetPassCode />}></Route>*/}
+          {/*<Route path="ResetPass" element={<ResetPass />}></Route>*/}
           <Route path="DesignerDashboard" element={<DesignerDashboard />}></Route>
           <Route path="MyMessages" element={<MyMessages />}></Route>
           <Route path="MyDesigns" element={<MyDesigns />}></Route>
@@ -54,7 +56,7 @@ function App() {
           <Route path='Learn' element={<Learn />}></Route>
           <Route path='ChooseSingleProduct' element={<ChooseSingleProduct />}></Route>
           <Route path="Basket" element={<Basket />}></Route>
-          <Route path="chooseAddress" element={<ChooseAddress />}></Route>
+          <Route path="ChooseAddress" element={<ChooseAddress />}></Route>
         </Route>
 
       </Routes >
