@@ -75,7 +75,7 @@ function Login() {
                             </section>
 
                             <section className="error"></section>
-                            <span>رمز عبور خود را فراموش کرده اید؟<Link to="/ForgetPass" className='link'>بازیابی رمز عبور</Link></span>
+                            <span>رمز عبور خود را فراموش کرده اید؟<Link to="/ForgetPassForm" className='link'>بازیابی رمز عبور</Link></span>
                             <button disabled={disable} className='btn' style={{
                                 color: !disable &&  "#FFF",
                                 backgroundColor: !disable && "#234E70FF"}}

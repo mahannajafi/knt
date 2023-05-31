@@ -1,6 +1,5 @@
 import "./LoginForm.css"
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
     const {register, handleSubmit, formState: { errors },} = useForm();
@@ -50,13 +49,9 @@ function LoginForm() {
                             {...register("phone_number", {
                                 required: "این فیلد اجباری است.",
                                 validate: (val) => {
-                                    if (
-                                        val.charAt(0) != "0" ||
-                                        val.charAt(1) != "9" ||
-                                        val.length != 11
-                                    ) {
-                                        return "شماره تلفن وارد شده معتر نیست.";
-                                    }
+                                    if (val.charAt(0) != "0") {return "اولین کاراکتر باید 0 باشد."}
+                                    else if (val.charAt(1) != "9") {return "دومین کاراکتر باید 9 باشد.";}
+                                    else  if(val.length != 11) {return "شماره تلفن باید 11 رقمی باشد."}
                                 },
                             })}
                         />
