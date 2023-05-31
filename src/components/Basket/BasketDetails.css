@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 6px 10px;
     font-size: 18px;
     border-radius: 20px 20px 0 0;
     margin-bottom: 10px;
@@ -46,4 +46,17 @@
     margin-right: 10%;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.emptyBasket {
+    /*height: 50vh;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyBasketImage {
+    width: 60%;
+    background-color: #61dafb;
 }
