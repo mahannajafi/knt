@@ -15,6 +15,7 @@ import RecoveryPass from "./Pages/RecoveryPass";
 import Register from "./Pages/Register";
 import VerificationCode from "./Pages/VereficationCode";
 import SetPass from "./Pages/SetPass";
+import ResetPass from "./Pages/ResetPass";
 import ProviderLogin from "./Pages/ProviderLogin";
 import DesignerDashboard from "./components/Dashboard/DesignerDashboard";
 import Learn from './components/Learn/Learn';
@@ -40,6 +41,7 @@ function App() {
           <Route path="Register" element={<Register />}></Route>
           <Route path="VerificationCode" element={<VerificationCode />}></Route>
           <Route path="SetPass" element={<SetPass />}></Route>
+          <Route path="ResetPass" element={<ResetPass />}></Route>
           <Route path="ProviderLogin" element={<ProviderLogin />}></Route>
           <Route path="DesignerDashboard" element={<DesignerDashboard />}></Route>
           <Route path="MyMessages" element={<MyMessages />}></Route>
