@@ -22,6 +22,7 @@ import ChooseSingleProduct from './Pages/ChooseSingleProduct';
 import Basket from "./Pages/Basket";
 import ChooseAddress from "./Pages/ChooseAddress";
 import ProviderDashboard from "./Pages/ProviderDashboard";
+import RawProduct from "./Pages/RawProduct";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="Basket" element={<Basket />}></Route>
           <Route path="ChooseAddress" element={<ChooseAddress />}></Route>
           <Route path="ProviderDashboard" element={<ProviderDashboard />}></Route>
+          <Route path="RawProduct" element={<RawProduct />}></Route>
         </Route>
 
       </Routes >
