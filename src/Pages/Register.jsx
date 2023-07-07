@@ -3,7 +3,7 @@ import GoToLogin from "../components/GoToLogin/GoToLogin";
 
 function Register() {
     return (
-        <div className='login'>
+        <div className='register'>
             <GoToLogin />
             <RegisterForm />
         </div>

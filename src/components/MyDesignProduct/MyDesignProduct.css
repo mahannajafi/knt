@@ -49,7 +49,8 @@
 }
 
 .design .designContent .desc p span {
-    padding-right: 10px;
+    /*padding-right: 10px;*/
+    /*margin-right: 10px;*/
     font-size: 14px;
     font-family: "vazir", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
     font-weight: 100;
@@ -79,16 +80,16 @@
     color: var(--main-color);
 }
 
-.price input[type="range"] {
-    -webkit-appearance: none;
-    height: 4px;
-    margin-top: 9px;
-    background: var(--main-color);
-    border-radius: 5px;
-    accent-color: yellow;
-    padding-right: 40px;
-    margin-right: 60px;
-}
+/*.price input[type="range"] {*/
+/*    -webkit-appearance: none;*/
+/*    height: 4px;*/
+/*    margin-top: 9px;*/
+/*    background: var(--main-color);*/
+/*    border-radius: 5px;*/
+/*    accent-color: yellow;*/
+/*    padding-right: 40px;*/
+/*    margin-right: 60px;*/
+/*}*/
 
 .priceRange {
     display: flex;
@@ -97,5 +98,16 @@
 }
 
 .priceRange div {
-    padding: 0 86px;
+    padding: 0 70px;
+}
+
+.price h4 {
+    margin-left: 20px;
+}
+
+.designedProductPrice {
+    color: var(--main-color) !important;
+    accent-color: yellow !important;
+    -webkit-appearance: none !important;
+    width: 200px !important;
 }

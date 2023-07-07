@@ -1,13 +1,14 @@
 import "./LoginForm.css"
 import { useForm } from "react-hook-form";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 function LoginForm() {
     const {register, handleSubmit, formState: { errors },} = useForm();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const onSubmitHandler = (data) => {
         console.log(data);
+        navigate("/")
     }
 
     // useEffect(() => {

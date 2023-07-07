@@ -1,3 +1,8 @@
+.register {
+    display: flex;
+    height: 100vh;
+}
+
 .goToLogContainer {
     width: 50%;
     height: 100%;
@@ -10,7 +15,7 @@
 .goToLogSection {
     height: 70%;
     width: 70%;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0 10px 10px 0;
     background-color: var(--main-color);
     box-shadow: 0 0 20px #333333;
     display: flex;

@@ -15,11 +15,37 @@ import CloseIcon from "@mui/icons-material/Close";
 function DashboardMenu() {
     const [count , setCount] = useState(1)
     const [messageNumber , setMessageMessageNumber] = useState(2)
-    const [isDesigner , setDesigner] = useState(false)
+    const [isDesigner , setDesigner] = useState(true)
     const [isClose , setClose] = useState(true)
     const navigate = useNavigate();
 
-    // useEffect(() => {
+    useEffect(() => {
+        console.log(count)
+    // }
+    //     if (count === 1){
+    //         // alert(count)
+    //         // navigate("/DesignerDashboard")
+    //     }
+    //     else if (count === 2){
+    //         // alert(count)
+    //         // navigate("/MyAddresses")
+    //     }
+    //     else if (count === 3){
+    //         // alert(count)
+    //         // navigate("/MyOrders")
+    //     }
+    //     else if (count === 4){
+    //         // alert(count)
+    //         navigate("/MyDesigns")
+    //     }
+    //     else if (count === 5){
+    //         // alert(count)
+    //         navigate("/MySaleStatistics")
+    //     }
+    //     else if (count === 6){
+    //         // alert(count)
+    //         navigate("/MyMessages")
+    //     }
     //     if(count === 7) {
     //         axios
     //             .post("https://chuplon.iran.liara.run/api/v1/account/logout/", {})
@@ -39,7 +65,7 @@ function DashboardMenu() {
     //                 }
     //             });
     //     }
-    // })
+    } , [count])
 
     return (
         <>
@@ -49,20 +75,23 @@ function DashboardMenu() {
                 <small>موجودی:1 میلیارد</small>
                 <button>برداشت</button>
                 <ul>
-                    <li onClick={() => setCount(1)}><Link className='dashboard' to="/DesignerDashboard">
-                        <PersonIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;اطلاعات کاربری</Link></li>
-                    <li onClick={() => setCount(2)}><Link className='dashboard' to="/MyAddresses">
-                        <MapsHomeWorkIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;ادرس های من</Link></li>
-                    <li onClick={() => setCount(3)}><Link className='dashboard' to="/MyOrders">
-                        <WorkOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;سفارش های من</Link></li>
-                    <li onClick={() => setCount(4)} style={{display: !isDesigner && "none"}}><Link className='dashboard' to="/MyDesigns">
-                        <DesignServicesIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;طرح های من</Link></li>
-                    <li onClick={() => setCount(5)} style={{display: !isDesigner && "none"}}><Link className='dashboard' to="/MySaleStatistics">
-                        <EqualizerIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;آمار فروش</Link></li>
-                    <li onClick={() => setCount(6)}><Link className='dashboard' to="/MyMessages">
+                    <li onClick={() => {setCount(1);navigate("/DesignerDashboard")}} style={{backgroundColor: (count === 1) && "red"}}>
+                        {/*<Link className='dashboard' to="/DesignerDashboard">*/}
+                        <PersonIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;اطلاعات کاربری</li>
+                    <li onClick={() => {setCount(2);navigate("/MyAddresses")}} style={{backgroundColor: (count === 2) && "red"}}>
+                        <MapsHomeWorkIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;ادرس های من</li>
+                    <li onClick={() => {setCount(3);navigate("/MyOrders")}}>
+                        <WorkOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;سفارش های من</li>
+                    <li onClick={() => {setCount(4);navigate("/MyDesigns")}}
+                        style={{display: !isDesigner && "none" , backgroundColor: (count === 3) && "red"}}>
+                        <DesignServicesIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;طرح های من</li>
+                    <li onClick={() => {setCount(5);navigate("/MySaleStatistics")}}
+                        style={{display: !isDesigner && "none" , backgroundColor: (count === 4) && "red"}}>
+                        <EqualizerIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;آمار فروش</li>
+                    <li onClick={() => {setCount(6);navigate("/MySaleStatistics")}} style={{backgroundColor: (count === 4) && "red"}}>
                         <MailOutlineIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;پیام های من
-                        {messageNumber !== 0 ? <div className="numberOfMessages">2</div> : ""}</Link></li>
-                    <li onClick={() => setCount(7)}><LogoutIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;خروج</li>
+                        {messageNumber !== 0 ? <div className="numberOfMessages">2</div> : ""}</li>
+                    <li onClick={() => {setCount(7)}}><LogoutIcon className="menuIcons" />&nbsp;&nbsp;&nbsp;خروج</li>
                 </ul>
                 {isDesigner ? <button>اکانت ویژه</button> : <button onClick={()=>setClose(false)}>ارتقا به طراح</button>}
                 <div className="upgradeToDesigner" style={{display: (isClose === false) && "block"}}>

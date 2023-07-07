@@ -2,6 +2,7 @@ import React from "react";
 import "./MyDesignProduct.css"
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import swishert from "../../assets/imgs/swishert.png";
+import Slider from '@mui/material/Slider';
 
 function MyDesignProduct({name , id , desc , minPrice , maxPrice}) {
     return (
@@ -17,12 +18,14 @@ function MyDesignProduct({name , id , desc , minPrice , maxPrice}) {
                     </div>
                     <div className="desc">
                         <p>
-                            <h4>توصیفات:</h4>
+                            <h4>توصیفات:</h4>&nbsp;&nbsp;&nbsp;
                             <span>{desc}</span>
                         </p>
                         <p className="price">
                             <h4>قیمت:</h4>
-                            <input min="4000" max="6000" type="range"/>
+                            {/*<input min="4000" max="6000" type="range" onChange={(event)=>{alert(event.target.value)}} />*/}
+                            <Slider className="designedProductPrice" defaultValue={50000} aria-label="Default"
+                                    valueLabelDisplay="auto" min={minPrice} max={maxPrice} style={{accentColor:"yellow"}} />
                         </p>
                         <div className="priceRange">
                             <div>{maxPrice}</div>
