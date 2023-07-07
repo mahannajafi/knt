@@ -36,26 +36,25 @@ const DesignInfo = ({ productID, providerID, availableProductColors }) => {
     description: productDescription,
     blank_product: productID,
     provider: providerID,
-    design_img: designFile,
-    sample_img: designedProductFile,
+    token: localStorage.getItem("token"),
+    // design_img: designFile,
+    // sample_img: designedProductFile,
     price: finalPrice,
-    colors: productColors,
+    //colors: productColors,
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post(`https://chuplon.iran.liara.run/api/v1/product/`, JSON, {
-        headers: {
-          "content-type": "multipart/form-data",
-          Authorization: `jwt ${localStorage.getItem("token")}`,
-        },
-      })
+      .post('https://chuplon.iran.liara.run/api/v1/product/', JSON
+      )
       .then((response) => {
-        navigate("/home");
+        console.log(response.data)
       })
       .catch((error) => {
-        navigate("/home");
+        console.log(JSON)
+        console.log(error.response)
+        //navigate("/home");
       });
   };
 
@@ -152,10 +151,10 @@ const DesignInfo = ({ productID, providerID, availableProductColors }) => {
               <input
                 type="file"
                 onChange={(event) => {
-                  const formData = new FormData();
-                  formData.append("image", event.target.files[0]);
+                  // const formData = new FormData();
+                  // formData.append("image", event.target.files[0], event.target.files[0].name);
                   event.preventDefault();
-                  setDesignFile(formData);
+                  setDesignFile(event.target.files[0]);
                 }}
                 className="design-info__form__label__input custom-file-input"
               />
@@ -166,10 +165,10 @@ const DesignInfo = ({ productID, providerID, availableProductColors }) => {
               <input
                 type="file"
                 onChange={(event) => {
-                  const formData = new FormData();
-                  formData.append("image", event.target.files[0]);
+                  //const formData = new FormData();
+                  //formData.append("image", , event.target.files[0].name);
                   event.preventDefault();
-                  setDesignedProductFile(formData);
+                  setDesignedProductFile(event.target.files[0]);
                 }}
                 className="design-info__form__label__input custom-file-input"
               />

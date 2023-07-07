@@ -1,0 +1,33 @@
+.providerLogContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--main-color);
+}
+
+.providerLogSection {
+    height: 70%;
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 20px #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-color);
+}
+
+.providerLogSection > h1 {
+    margin-bottom: 20px;
+}
+
+.providerLogText {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-left: 36%;
+}

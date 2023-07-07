@@ -1,0 +1,34 @@
+.rawProductContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.rawProduct {
+    width: 86%;
+}
+
+.sortProducts {
+    display: flex;
+    font-weight: 700;
+    border-bottom: 1px solid #ababab;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.filterProducts {
+    display: flex;
+}
+
+.sortProducts > * {
+    margin-left: 16%;
+}
+
+.sortIcon {
+    color: var(--main-color);
+}
+
+.FilterProductsTitle {
+    display: flex;
+    color: #4b4b4b;
+}

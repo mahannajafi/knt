@@ -1,0 +1,40 @@
+.filter {
+    width: 14%;
+    height: fit-content;
+    margin-top: 60px;
+    margin-left: 4px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #a9a9a9;
+    padding: 6px;
+}
+
+.filterTitle {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.filterTitles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.filterIcons {
+    color: var(--main-color);
+}
+
+.filterItems {
+    padding: 4px 10px;
+    margin: 0 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ababab;
+    display: flex;
+    align-items: center;
+}
+
+.filterItems > input {
+    margin-left: 4px;
+    outline: none;
+}

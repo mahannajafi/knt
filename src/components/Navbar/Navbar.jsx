@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isLogin, useLogin] = useState(localStorage.getItem("token"));
+
   return (
     <>
       <div className="headerUp">
@@ -27,7 +28,7 @@ function Navbar() {
         </div>
         <div className="headerUp__left">
           <div className="headerUp__design">
-            <FontAwesomeIcon icon={faPenRuler} />
+            <FontAwesomeIcon className='headerUp--icon' icon={faPenRuler} />
 
             <button className="headerUp__designBtn">
               <Link className="headerUp__designBtnLink--primary" to="/Learn">
@@ -41,7 +42,7 @@ function Navbar() {
                 <FontAwesomeIcon icon={faBell} />
               </div>
               <div className="headerUp__design headerUp__design-primary headerUp__user">
-                <FontAwesomeIcon icon={faUser} />
+                <Link className='userDashboard' to="./DesignerDashboard"><FontAwesomeIcon icon={faUser} /></Link>
               </div>
             </>
           )}
@@ -54,7 +55,7 @@ function Navbar() {
                   ورود
                 </Link>
                 &nbsp;|&nbsp;
-                <Link className="headerUp__designBtnLink" to="/SignUp">
+                <Link className="headerUp__designBtnLink" to="/Register">
                   ثبت نام
                 </Link>
               </button>

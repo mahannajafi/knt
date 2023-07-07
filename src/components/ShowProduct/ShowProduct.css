@@ -1,0 +1,29 @@
+.showProductsContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.showProducts {
+    width: 24%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    margin: 0.5%;
+}
+
+.productImage {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.productDetails {
+    margin-top: 10px;
+    color: #3a3a3a;
+}

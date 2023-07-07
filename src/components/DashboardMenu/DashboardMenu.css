@@ -1,0 +1,136 @@
+.dashboardMenuContainer {
+    width: 20%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1rem;
+    padding: 20px 0;
+    min-height: 800px;
+    border-radius: 40px;
+    color: #FFF;
+}
+
+.dashboardMenuContainer strong , .dashboardMenuContainer small , .dashboardMenuContainer button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboardMenuContainer button:nth-of-type(1) {
+    width: 90%;
+    border: 1px solid var(--second-color);
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border-radius: 12px;
+    padding: 6px 0;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.dashboardMenuContainer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start !important;
+    align-items: center;
+    margin-bottom: 30px;
+    width: calc(100% -  20px);
+    margin-right: 20px;
+}
+
+.dashboardMenuContainer ul li {
+    width: 100%;
+    padding: 10px 36px 10px 0;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: start !important;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.dashboard {
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 0 20px 20px 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dashboardMenuContainer button:nth-of-type(2) {
+    width: 90%;
+    border: 1px solid var(--second-color);
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border-radius: 16px;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accountIcon {
+    color: white;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numberOfMessages {
+    margin-right: 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.upgradeToDesigner {
+    width: 40%;
+    height: 38%;
+    background-color: #FFF;
+    z-index: 1;
+    position: fixed;
+    top: 31%;
+    left: 30%;
+    display: none;
+    transition: 1s;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #343434;
+    margin-bottom: 20px;
+}
+
+.upgradeToDesignerHeader {
+    padding: 10px 44% 10px 20px;
+    background-color: var(--main-color);
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--second-color);
+}
+
+.upgradeToDesignerText {
+    color: black;
+    text-align: justify;
+    padding: 20px;
+}
+
+.upgradeToDesignerButton {
+    width: 40% !important;
+    margin: 10px auto;
+    display: flex;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    cursor: pointer;
+}

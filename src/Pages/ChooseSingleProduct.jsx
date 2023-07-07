@@ -10,15 +10,15 @@ const ChooseSingleProduct = () => {
   let { state } = useLocation();
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(
-        `https://chuplon.iran.liara.run/api/v1/blank_product/find_by_type/${state.id}`
-      )
-      .then((response) => {
-        setData(response.data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://chuplon.iran.liara.run/api/v1/blank_product/find_by_type/${state.id}`
+  //     )
+  //     .then((response) => {
+  //       setData(response.data);
+  //     });
+  // }, []);
   return (
     <>
       <Navbar />

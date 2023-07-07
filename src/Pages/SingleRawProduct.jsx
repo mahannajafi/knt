@@ -14,21 +14,21 @@ const SingleProduct = () => {
   const [data1, setData1] = useState([]);
   const [data2, setData2] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.all([
-        axios.get(
-          `https://chuplon.iran.liara.run/api/v1/blank_product/${state.id}/`
-        ),
-        axios.get(
-          `https://chuplon.iran.liara.run/api/v1/blank_product/product_provider/find_by_blank_product/${state.id}`
-        ),
-      ]);
-      setData1(response[0].data);
-      setData2(response[1].data);
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await axios.all([
+  //       axios.get(
+  //         `https://chuplon.iran.liara.run/api/v1/blank_product/${state.id}/`
+  //       ),
+  //       axios.get(
+  //         `https://chuplon.iran.liara.run/api/v1/blank_product/product_provider/find_by_blank_product/${state.id}`
+  //       ),
+  //     ]);
+  //     setData1(response[0].data);
+  //     setData2(response[1].data);
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <>

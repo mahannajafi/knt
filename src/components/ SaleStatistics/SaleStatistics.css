@@ -1,0 +1,47 @@
+.statistics {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.statistics .statisticsTitle {
+    background-color: var(--main-color);
+    padding: 6px 20px;
+    color: var(--second-color);
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statistics .statisticContent {
+    display: flex;
+}
+
+.statistics .statisticContent div:nth-of-type(1) {
+    width: 20%;
+}
+
+.statistics .statisticContent div:nth-of-type(1) img {
+    width: 90%;
+}
+
+.statistics .statisticContent .statisticsDesc {
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statistics .statisticContent .statisticsDesc p:nth-of-type(1) {
+    font-size: 17px;
+}
+
+.statistics .statisticContent .statisticsDesc p:nth-of-type(2) {
+    font-size: 15px;
+    color: #565656;
+}
+
+.statistics .statisticContent .statisticsDesc * {
+    height: 50%;
+}

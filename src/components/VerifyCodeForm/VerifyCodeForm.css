@@ -1,0 +1,33 @@
+.verifyCodeFormContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.verifyCodeSection {
+    height: 70%;
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 20px #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.verifyCodeSection > h1 {
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 40px;
+}
+
+.verifyCodeForm {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 200px;
+}

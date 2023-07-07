@@ -12,16 +12,16 @@ const Design = () => {
   const [data, setData] = useState([]);
   const [image, setImage] = useState();
 
-  useEffect(() => {
-    axios
-      .get(
-        `https://chuplon.iran.liara.run/api/v1/blank_product/${state.productID}/`
-      )
-      .then((response) => {
-        setData(response.data);
-        setImage(response.data.blank_product_sample_images[0].sample_file);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://chuplon.iran.liara.run/api/v1/blank_product/${state.productID}/`
+  //     )
+  //     .then((response) => {
+  //       setData(response.data);
+  //       setImage(response.data.blank_product_sample_images[0].sample_file);
+  //     });
+  // }, []);
 
   return (
     <>
